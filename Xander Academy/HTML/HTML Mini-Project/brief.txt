@@ -1,0 +1,54 @@
+Requirements:
+
+ - Your blog has three pages: index.html, about.html and contact.html
+ - Your index also needs a link to about.html and contact.html
+ - Your blog must have five posts on it (you can just keep it all on the same page).
+ - The code should be written using semantic HTML.
+
+
+Use Git and Github
+Every time you make a change or addition to your project:
+
+ - Add and Commit to git (using meaningful commit messages)
+ - Push to Github
+
+
+The Pages
+
+index.html
+This page will contain your blog posts, and links to about.html and contact.html.
+As well as your blog posts and navigation, this page should contain:
+
+ - A heading
+ - A callout with a short lead paragraph
+
+Each blog post should contain:
+
+ - A title
+ - An author
+ - The date it was posted (feel free to make up times)
+ - The text of the blog post. Bonus points if there are multiple paragraphs. Feel free to use Lorem Ipsum if you want placeholder text.
+ - Bonus points for images.
+
+
+about.html
+Your about.html page should have:
+
+ - A link back to index.html
+ - A heading displaying your name
+ - A few paragraphs about you
+ - A list of your recent jobs/schools/accomplishments
+
+
+contact.html
+Your contact.html should have:
+
+ - A heading
+ - A link back to index.html
+ - A short paragraph inviting the user to get in touch
+ - A HTML form which allows the user to submit:
+    - Their name
+    - Their email address
+    - A message
+ - A label should be displayed alongside each input in the form
+ - Consider what would be the appropriate attributes when creating your inputs and associated labels!
