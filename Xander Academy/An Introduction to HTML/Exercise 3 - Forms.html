@@ -1,35 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <title>
-            Exercise 3
-        </title>
+        <title>Exercise 3</title>
     </head>
+
     <body>
-        <h1>Contact Us!</h1>
-        <form>
-            <fieldset>
-                <legend>
-                    Enter your details
-                </legend>
 
-                <h2>General Information</h2>
-                <p><label for="first_name">First Name </label><input id="first_name" type="text" /></p>
-                <p><label for="last_name">Last Name </label><input id="last_name" type="text" /></p>
-                <p><label for="email">Email </label><input id="email" type="text" /></p>
-                <p><label for="dob">Date of Birth </label><input id="dob" type="date" /></p>
+        <h1 class = "contact_heading">Contact Us!</h1>
+        <form class = "contact_form">
+            <fieldset class = "form_content">
 
-                <h2>Essential Questions</h2>
-                <p>Back End, Front End, or Full Stack?</p>
-                <!-- I would never do this irl. Designed after an image :) -->
-                Back End <input type="checkbox" /><br />
-                Front End <input type="checkbox" /><br />
-                Full Stack <input type="checkbox" /><br /><br />
+                <legend class = "form_instruction_legend">Enter your details</legend>
+                <article class = "enquiry_information">
+                    <div class = "general_information">
 
-                <button>Submit</button>
+                        <h2 class = "general_information_heading">General Information</h2>
+                        <div class = "general_information_input">
+
+                            <div class = "first_name"><label for = "first_name_text">First Name </label><input id = "first_name_text" type = "text" /></div>
+                            <div class = "last_name"><label for = "last_name_text">Last Name </label><input id = "last_name_text" type = "text" /></div>
+                            <div class = "email"><label for = "email_text">Email </label><input id = "email_text" type = "text" /></div>
+                            <div class = "dob"><label for = "dob_date">Date of Birth </label><input id = "dob_date" type = "date" /></div>
+                        </div>
+                    </div>
+
+                    <div class = "essential_questions">
+
+                        <h2 class = "essential_questions_heading">Essential Questions</h2>
+                        <p class = "essential_questions_question">Back End, Front End, or Full Stack?</p>
+                        <div class = "essential_questions_input">
+
+                            <div><label for = "back_end_checkbox">Back End </label><input id = "back_end_checkbox" type = "checkbox" /></div>
+                            <div><label for = "front_end_checkbox">Front End </label><input id = "front_end_checkbox" type = "checkbox" /></div>
+                            <div><label for = "full_stack_checkbox">Full Stack </label><input id = "full_stack_checkbox" type = "checkbox" /></div>
+
+                        </div>
+                        <button class = "submit_button">Submit</button>
+                    </div>
+                </article>
             </fieldset>
         </form>
     </body>
