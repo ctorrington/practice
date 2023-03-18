@@ -18,6 +18,8 @@ Each blog post should contain:
  .header_naviation_elements {} will not change the <a> tags,
     that requires .header_navigation_elements{} a. why?  -->
 
+    <!-- TODO : figure out how to get a label tag for textarea -->
+
 <!DOCTYPE html>
 <html lang = "en">
     <!-- Meta data. -->
@@ -80,7 +82,7 @@ Each blog post should contain:
                         <blockquote>
                             <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
                         </blockquote>
-                        <figcaption>Christopher Torrington, <cite>(DATE POSTED)</cite></figcaption>
+                        <figcaption>Christopher Torrington, <cite><small><time datetime = "2023-03-18T20:00:00">on 18/03/2023</time><small></small></cite></figcaption>
                     </figure>
 
                     <!-- Like and comment option buttons -->
@@ -112,7 +114,10 @@ Each blog post should contain:
                     <form class = "user_comment_section_container">
                         <fieldset class = "user_comment_section">
                             <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
-                            <textarea class = "user_comment_textarea"></textarea>
+                            <!-- Implicit label caption with aria tag for leaving label text in legend. This is purely aethetical, but still semantic. -->
+                            <label aria-label = "Enter the coment you would like to leave for the above post.">
+                                <textarea class = "user_comment_textarea"></textarea>
+                            </label>
                         </fieldset>
                     </form>
                 </article>

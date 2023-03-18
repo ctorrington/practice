@@ -22,22 +22,75 @@
     </head>
     <body>
         <!-- Header, navigation -->
-        <header>
-            <h1>Due Diligence Gambling</h1>
-            <nav>
-                <ul>
-                    <li>
-                        <a href = "./index.html">Home</a>
-                    </li>
-                    <li>
-                        <a href = "./about.html">About</a>
-                    </li>
+        <header class = "header_background">
+
+            <h1 class = "header_title">Due Diligence Gambling</h1>
+            <nav class = "header_navigation">
+                <ul class = "header_navigation_elements">
+                    <div class = "navigation_alignment_div">
+                        <li>
+                            <a href = "./index.html">Home</a>
+                        </li>
+                        <li>
+                            <a href = "./about.html">About</a>
+                        </li>
+                    </div>
+
                 </ul>
             </nav>
         </header>
 
+        <main>
+            <h2>Let's Connect</h2>
+            <section class = "form section">
+                <form class = "contact_submission_form">
+                    <fieldset>
+                        <legend class = "contact_form_legend">
+                            Contact Submission Form
+                        </legend>
+                        <!-- Not certain if these should be in a list -->
+                        <!-- They are a list of things though, and so, structurally, it feels right :) -->
+                        <!-- TODO CSS these up to look good -->
+                        <ul>
+                            <li>
+                                <label>
+                                    First Name: <input type = "text" required />
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    Last Name: <input type = "text" required />
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    Email: <input type = "email" required />
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    Phone Number: <input type = "tel" required />
+                                </label>
+                            </li>
+                            <li>
+                                <label>
+                                    Enter the feedback that you would like to give below:
+                                    <textarea>
+                                    </textarea>
+                                </label>
+                            </li>
+                            <li>
+                                <label aria-label = "Submit your feedback to me">
+                                    <input type = "submit" required />
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </form>
+            </section>
 
-        <h1>Let's Connect</h1>
+        </main>
+
         <p>This needs to be a paragraph about getting in touch</p>
         <p>Thank you so much for the interest in getting in touch. I would love to here from you!</p>
         <p>Passions are enjoyed most when shared with others. If you have a favourite trump tweet, I implore you to send it to me :)</p>
