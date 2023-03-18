@@ -11,65 +11,333 @@ Each blog post should contain:
  - The date it was posted (feel free to make up times)
  - The text of the blog post. Bonus points if there are multiple paragraphs. Feel free to use Lorem Ipsum if you want placeholder text.
  - Bonus points for images. -->
+ 
+
+ <!-- Questions for later:
+ how does css inheritance work?
+ .header_naviation_elements {} will not change the <a> tags,
+    that requires .header_navigation_elements{} a. why?  -->
 
 <!DOCTYPE html>
 <html lang = "en">
+    <!-- Meta data. -->
     <head>
         <meta charset = "utf-8">
         <meta http-equiv = "X-UA-Compatible">
         <meta name = "viewport" content = "width = #, initial-scale = 1.0">
 
         <link rel="stylesheet" href="styles.css">
-        <title>My Website</title>
+        <title>Due Diligence Gambling - Home</title>
     </head>
+
+
+    <!-- Display me. -->
     <body>
-        <header>
-            <nav>
-                <ul>
-                    <li>item1</li>
-                    <li>item2</li>
+        <!-- Header, navigation -->
+        <header class = "header_background">
+
+            <h1 class = "header_title">Due Diligence Gambling</h1>
+            <nav class = "header_navigation">
+                <ul class = "header_navigation_elements">
+                    <div class = "navigation_alignment_div">
+                        <li>
+                            <a href = "./about.html">About</a>
+                        </li>
+                        <li>
+                            <a href = "./contact.html">Contact</a>
+                        </li>
+                    </div>
+                    <li>
+                        <a href = "./post.html">Contribute an insightful post</a>
+                    </li>
                 </ul>
             </nav>
-
         </header>
 
-        <!-- This will be the timeline on the left hand side of the page. -->
+
+        <!-- Timeline on the left hand side of the page. -->
         <aside>
 
         </aside>
 
-        <main>
-            <article>
-                <img src = "trump" alt = "trump tweet lol" />
-                <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
-                <menu>
-                    <li>
-                        <button id = "like">♡</button>
-                    </li>
-                    <li>
-                        <details>
-                            <summary>
-                                comments
-                            </summary>
-                            <figure>
-                                <blockquote cite="https://www.huxley.net/bnw/four.html">
-                                    <p>Words can be like X-rays, if you use them properly—they’ll go through anything. You read and you’re pierced.</p>
-                                </blockquote>
-                                <figcaption>—Aldous Huxley, <cite>Brave New World</cite></figcaption>
-                            </figure>
-                        </details>
-                    </li>
-                </menu>
-                <p>commet</p>
-                <textarea>
-                    
-                </textarea>
-            </article>
 
+        <!-- Content feed -->
+        <main>
+            <section class = "post_wall">
+
+                <!-- A single post container. -->
+                <article class = "individual_post">
+
+                    <!-- Post image -->
+                    <img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/SCB%20SVB%20lifeline%20swiss%20meme.jpg?raw=true" 
+                            alt = "trump tweet lol"
+                            class = "individual_post_image"
+                            />
+
+                    <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
+                    <!-- Post caption with poster name -->
+                    <figure class = "individual_post_info_container">
+                        <blockquote>
+                            <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
+                        </blockquote>
+                        <figcaption>Christopher Torrington, <cite>(DATE POSTED)</cite></figcaption>
+                    </figure>
+
+                    <!-- Like and comment option buttons -->
+                    <menu class = "like_and_view_comments">
+                        <li>
+                            <span><button id = "like_button" class = "like_button post_interaction_button"><strong>♡</strong></button> 5m likes</span>
+                        </li>
+                        <li>
+                            <!-- Comment details -->
+                            <details class = "comment_section_container post_interaction_button">
+                                <summary class = "comments_heading">comments</summary>
+                                <!-- All comments for post. -->
+                                <figure class = "comments_section">
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">I don't know about you, but I'm feeling less than neutral about this...</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">Yo I have an opinion as well.</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">DIfferent Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+                                </figure>
+                            </details>
+                        </li>
+                    </menu>
+
+                    <!-- User comment Section -->
+                    <form class = "user_comment_section_container">
+                        <fieldset class = "user_comment_section">
+                            <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
+                            <textarea class = "user_comment_textarea"></textarea>
+                        </fieldset>
+                    </form>
+                </article>
+
+
+                <!-- A single post container. -->
+                <article class = "individual_post">
+
+                    <!-- Post image -->
+                    <img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/varrock%20grand%20exchange%20trader.jpg?raw=true" 
+                            alt = "trump tweet lol"
+                            class = "individual_post_image"
+                            />
+
+                    <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
+                    <!-- Post caption with poster name -->
+                    <figure class = "individual_post_info_container">
+                        <blockquote>
+                            <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
+                        </blockquote>
+                        <figcaption>Christopher Torrington, <cite>(DATE POSTED)</cite></figcaption>
+                    </figure>
+
+                    <!-- Like and comment option buttons -->
+                    <menu class = "like_and_view_comments">
+                        <li>
+                            <span><button id = "like_button" class = "like_button post_interaction_button"><strong>♡</strong></button> 5m likes</span>
+                        </li>
+                        <li>
+                            <!-- Comment details -->
+                            <details class = "comment_section_container post_interaction_button">
+                                <summary class = "comments_heading">comments</summary>
+                                <!-- All comments for post. -->
+                                <figure class = "comments_section">
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">I don't know about you, but I'm feeling less than neutral about this...</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">Yo I have an opinion as well.</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">DIfferent Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+                                </figure>
+                            </details>
+                        </li>
+                    </menu>
+
+                    <!-- User comment Section -->
+                    <form class = "user_comment_section_container">
+                        <fieldset class = "user_comment_section">
+                            <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
+                            <textarea class = "user_comment_textarea"></textarea>
+                        </fieldset>
+                    </form>
+                </article>
+
+
+                <!-- A single post container. -->
+                <article class = "individual_post">
+
+                    <!-- Post image -->
+                    <img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/jerome%20powell%20wanna%20bet%20lol.jpg?raw=true" 
+                            alt = "trump tweet lol"
+                            class = "individual_post_image"
+                            />
+
+                    <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
+                    <!-- Post caption with poster name -->
+                    <figure class = "individual_post_info_container">
+                        <blockquote>
+                            <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
+                        </blockquote>
+                        <figcaption>Christopher Torrington, <cite>(DATE POSTED)</cite></figcaption>
+                    </figure>
+
+                    <!-- Like and comment option buttons -->
+                    <menu class = "like_and_view_comments">
+                        <li>
+                            <span><button id = "like_button" class = "like_button post_interaction_button"><strong>♡</strong></button> 5m likes</span>
+                        </li>
+                        <li>
+                            <!-- Comment details -->
+                            <details class = "comment_section_container post_interaction_button">
+                                <summary class = "comments_heading">comments</summary>
+                                <!-- All comments for post. -->
+                                <figure class = "comments_section">
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">I don't know about you, but I'm feeling less than neutral about this...</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">Yo I have an opinion as well.</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">DIfferent Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+                                </figure>
+                            </details>
+                        </li>
+                    </menu>
+
+                    <!-- User comment Section -->
+                    <form class = "user_comment_section_container">
+                        <fieldset class = "user_comment_section">
+                            <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
+                            <textarea class = "user_comment_textarea"></textarea>
+                        </fieldset>
+                    </form>
+                </article>
+
+
+                <!-- A single post container. -->
+                <article class = "individual_post">
+
+                    <!-- Post image -->
+                    <img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/financial%20collapse%20meme.jpg?raw=truehttps://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/financial%20collapse%20meme.jpg?raw=true" 
+                            alt = "trump tweet lol"
+                            class = "individual_post_image"
+                            />
+
+                    <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
+                    <!-- Post caption with poster name -->
+                    <figure class = "individual_post_info_container">
+                        <blockquote>
+                            <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
+                        </blockquote>
+                        <figcaption>Christopher Torrington, <cite>(DATE POSTED)</cite></figcaption>
+                    </figure>
+
+                    <!-- Like and comment option buttons -->
+                    <menu class = "like_and_view_comments">
+                        <li>
+                            <span><button id = "like_button" class = "like_button post_interaction_button"><strong>♡</strong></button> 5m likes</span>
+                        </li>
+                        <li>
+                            <!-- Comment details -->
+                            <details class = "comment_section_container post_interaction_button">
+                                <summary class = "comments_heading">comments</summary>
+                                <!-- All comments for post. -->
+                                <figure class = "comments_section">
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">I don't know about you, but I'm feeling less than neutral about this...</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">Yo I have an opinion as well.</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">DIfferent Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+                                </figure>
+                            </details>
+                        </li>
+                    </menu>
+
+                    <!-- User comment Section -->
+                    <form class = "user_comment_section_container">
+                        <fieldset class = "user_comment_section">
+                            <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
+                            <textarea class = "user_comment_textarea"></textarea>
+                        </fieldset>
+                    </form>
+                </article>
+
+
+                <!-- A single post container. -->
+                <article class = "individual_post">
+
+                    <!-- Post image -->
+                    <img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/joseph%20gentile%20meme.jpg?raw=true" 
+                            alt = "trump tweet lol"
+                            class = "individual_post_image"
+                            />
+
+                    <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
+                    <!-- Post caption with poster name -->
+                    <figure class = "individual_post_info_container">
+                        <blockquote>
+                            <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
+                        </blockquote>
+                        <figcaption>Christopher Torrington, <cite>(DATE POSTED)</cite></figcaption>
+                    </figure>
+
+                    <!-- Like and comment option buttons -->
+                    <menu class = "like_and_view_comments">
+                        <li>
+                            <span><button id = "like_button" class = "like_button post_interaction_button"><strong>♡</strong></button> 5m likes</span>
+                        </li>
+                        <li>
+                            <!-- Comment details -->
+                            <details class = "comment_section_container post_interaction_button">
+                                <summary class = "comments_heading">comments</summary>
+                                <!-- All comments for post. -->
+                                <figure class = "comments_section">
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">I don't know about you, but I'm feeling less than neutral about this...</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+
+                                    <blockquote class = "comment_block">
+                                        <p class = "comment_text">Yo I have an opinion as well.</p>
+                                    </blockquote>
+                                    <figcaption class = "comment_author">DIfferent Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
+                                </figure>
+                            </details>
+                        </li>
+                    </menu>
+
+                    <!-- User comment Section -->
+                    <form class = "user_comment_section_container">
+                        <fieldset class = "user_comment_section">
+                            <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
+                            <textarea class = "user_comment_textarea"></textarea>
+                        </fieldset>
+                    </form>
+                </article>
+                
+               
+
+
+            </section>
         </main>
 
+
         <footer>
-            <small>This website was brought to you by myself. Contact me <a href = "contact.html">here</a>.</small>
+            <small>This website was brought to you by myself, <small>I am so sorry</small>. Contact me <a href = "contact.html">here</a>.</small>
 
         </footer>
     </body>
