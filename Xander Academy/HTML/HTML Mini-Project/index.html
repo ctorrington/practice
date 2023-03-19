@@ -18,7 +18,7 @@ Each blog post should contain:
  .header_naviation_elements {} will not change the <a> tags,
     that requires .header_navigation_elements{} a. why?  -->
 
-    <!-- TODO : figure out how to get a label tag for textarea -->
+<!-- NOTE: theres a lot of comments on the first post. its just explanations of what/why i did things bc i will forget later :) -->
 
 <!DOCTYPE html>
 <html lang = "en">
@@ -29,7 +29,7 @@ Each blog post should contain:
         <meta name = "viewport" content = "width = #, initial-scale = 1.0">
 
         <link rel="stylesheet" href="styles.css">
-        <title>Due Diligence Gambling - Home</title>
+        <title>Due Diligence Gambling</title>
     </head>
 
 
@@ -54,6 +54,15 @@ Each blog post should contain:
                     </li>
                 </ul>
             </nav>
+
+            <!-- Website Callout. -->
+            <div class = "website_callout_container">
+                <div class = "website_callout">
+                    <p><small>This website is dedicated to your sentiment regarding the swings of the market.</small></p>
+                    <p><small>What goes up comes down, what is red goes green, crouch to jump, dip to soar.</small></p>
+                </div>
+                <p class = "disclaimer"><small>do not take anything seriously</small></p>
+            </div>
         </header>
 
 
@@ -64,25 +73,30 @@ Each blog post should contain:
             <!-- I cant thinkg of other places for a section tag in a blog page though -->
             <section class = "post_wall">
 
-                <!-- SCB, Credit Suisse +=- meme -->
+                <!-- SCB, Credit Suisse +- meme -->
                 <!-- Blog posts are self-contained and so can go into an article tag -->
                 <article class = "individual_post">
 
                     <!-- Image for post content -->
                     <img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/HTML/HTML%20Mini-Project/images/SCB%20SVB%20lifeline%20swiss%20meme.jpg?raw=true" 
-                            alt = "trump tweet lol"
+                            alt = "A FT article on the left describing Credit Suisse shares rallying after a $54 billion lifeline from the Swiss central bank, contrasted by the image on the right of the Winnie The Poo meme of him prefering the Swiss flag as a minus rather than a plus (its actual symbol on the flag).
+                                    The meme conveys that Switzerland prefers the negative to the plus as the lifeline was seen to be a bad idea."
                             class = "individual_post_image"
                             />
 
-                    <!-- semantic alternative to <ul>. has buttons in example, could be used to like, comment (comment into details?) -->
+                    <!-- Self-containered tag of the post description, post author, & post date -->
+                    <!-- Block post for the post description with a figure description as the post author and date -->
                     <!-- Post caption with poster name -->
                     <figure class = "individual_post_info_container">
                         <blockquote>
-                            <p class = "individual_post_info_text">Yo i posted this. I think it symbolises the disparity in some other words to take up a lot of space.</p>
+                            <p class = "individual_post_info_text">Credit Sus getting a massive bailout! Are those chocolates going to get cheaper??</p>
                         </blockquote>
                         <figcaption>Christopher Torrington, <i><small>on <time datetime = "2023-03-18T20:00:00" title = "18/03/2023 at 20:00:00">18/03/2023</time></small></i></figcaption>
                     </figure>
 
+                    <!-- Semantic alternative to <ul>. Used here for liking and commenting options. -->
+                    <!-- Liking a post is simply a button, commeting on a post is done through <details>, it provides expansion functionality -->
+                    <!-- Comments on a post can be shown and hidden. If shown, same structure as post description with author is used (figure, blockquote, figcaption) -->
                     <!-- Like and comment option buttons -->
                     <menu class = "like_and_view_comments">
                         <li>
@@ -100,7 +114,7 @@ Each blog post should contain:
                                     <figcaption class = "comment_author">Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
 
                                     <blockquote class = "comment_block">
-                                        <p class = "comment_text">Yo I have an opinion as well.</p>
+                                        <p class = "comment_text">Yeah, their stock price is going to start looking like that mountain of theirs.</p>
                                     </blockquote>
                                     <figcaption class = "comment_author">DIfferent Commenter name, <cite class = "comment_date"><small>(COMMENT DATE)</small></cite></figcaption>
                                 </figure>
@@ -108,11 +122,13 @@ Each blog post should contain:
                         </li>
                     </menu>
 
+                    <!-- User submitted data, so a form tag is used -->
+                    <!-- textarea hidden within legend border for aesthetics -->
                     <!-- User comment Section -->
                     <form class = "user_comment_section_container">
                         <fieldset class = "user_comment_section">
                             <legend class = "user_comment_heading">Leave a thought provoking comment</legend>
-                            <!-- Implicit label caption with aria tag for leaving label text in legend. This is purely aethetical, but still semantic. -->
+                            <!-- Implicit label caption. This is purely aethetical, but still semantic. -->
                             <label aria-label = "Enter the coment you would like to leave for the above post.">
                                 <textarea class = "user_comment_textarea"></textarea>
                             </label>
