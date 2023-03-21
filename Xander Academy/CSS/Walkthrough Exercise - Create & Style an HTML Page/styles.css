@@ -68,3 +68,13 @@ a:hover {
     text-decoration: none;
     color: var(--hotmag);
 }
+
+footer {
+    background-color: var(--plum);
+}
+
+address {
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+}
