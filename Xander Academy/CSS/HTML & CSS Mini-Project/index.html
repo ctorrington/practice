@@ -9,75 +9,98 @@
 		<title>News homepage</title>
 	</head>
 	<body>
+		<main>
 
-		<!-- Navigation -->
-		<nav>
-			<ul>
-				<li>Home</li>
-				<li>New</li>
-				<li>Popular</li>
-				<li>Trending</li>
-				<li>Categories</li>
-			</ul>    
-		</nav>
+			<!-- Navigation -->
+			<nav class = "navigation">
+				<ul class = "navigation_list">
+					<li class = "navigation_list_item">Home</li>
+					<li class = "navigation_list_item">New</li>
+					<li class = "navigation_list_item">Popular</li>
+					<li class = "navigation_list_item">Trending</li>
+					<li class = "navigation_list_item">Categories</li>
+				</ul>    
+			</nav>
 
-		<!-- Main image -->
-		<img />
+			<!-- Main section -->
+			<section class = "main_section">
+				<article class = "main_section_article">
+					<img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/CSS/HTML%20&%20CSS%20Mini-Project/assets/images/image-web-3-desktop.jpg?raw=true"
+						alt = "cool looking tech image"
+						class = "main_section_image" />
 
-		<!-- Main article heading -->
-		<h1>The Bright Future of Web 3.0?</h1>
+					<!-- Main article heading -->
+					<h1 class = "main_section_heading">The Bright Future of Web 3.0?</h1>
 
-		<!-- Main article summary -->
-		<p>We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
+					<!-- Main article summary -->
+					<p class = "main_section_paragraph">We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. But is it really fulfilling its promise?</p>
 
-		<button>Read more</button>
-
-		<!-- New newstories list -->
-		<h2>New</h2>
-
-		<dl>
-			<dt>Hydrogen VS Electric Cars</dt>
-				<dd>Will hydrogen-fueled cars ever catch up to EVs?</dd>
-
-			<dt>The Downsides of AI Artistry</dt>
-				<dd>What are the possible adverse effects of on-demand AI image generation?</dd>
-
-			<dt>Is VC Funding Drying Up?</dt>
-				<dd>Private funding by VC firms is down 50% YOY. We take a look at what that means.</dd>
-		</dl>
-
-
-		<!-- Other news stories list -->
-		<ul>
-			<!-- News story 1 -->
-			<li>
-				<article>
-					<img />
-					<h3>01</h3>
-					<h4>Reviving Retro PCs</h4>
-					<p>What happens when old PCs are given modern upgrades?</p>
+					<button class = "main_section_button">Read more</button>
 				</article>
-			</li>
+			</section>
 
-			<!-- News story 2 -->
-			<li>
-				<article>
-					<img />
-					<h3>02</h3>
-					<h4>Top 10 Laptops of 2022</h4>
-					<p>Our best picks for various needs and budgets.</p>
-				</article>
-			</li>
+			<!-- New sideline section -->
+			<section class = "new_section">
+				<h2 class = "new_section_heading">New</h2>
+				<dl class = "new_section_list">
+					<article class = "new_section_article">
+						<dt class = "new_section_list_title">Hydrogen VS Electric Cars</dt>
+						<dd class = "new_section_list_description">Will hydrogen-fueled cars ever catch up to EVs?</dd>
+					</article>
 
-			<!-- News story 3 -->
-			<li>
-				<article>
-					<img />
-					<h3>03</h3>
-					<h4>The Growth of Gaming</h4>
-					<p>How the pandemic has sparked fresh opportunities.</p>
-				</article>
-			</li>
-		</ul>
+					<article class = "new_section_article">
+						<dt class = "new_section_list_title">The Downsides of AI Artistry</dt>
+						<dd class = "new_section_list_description">What are the possible adverse effects of on-demand AI image generation?</dd>
+					</article>
+
+					<article class = "new_section_article">
+						<dt class = "new_section_list_title">Is VC Funding Drying Up?</dt>
+						<dd class = "new_section_list_description">Private funding by VC firms is down 50% YOY. We take a look at what that means.</dd>
+					</article>
+				</dl>
+			</section>
+
+
+			<section class = "ranked_section">
+				<!-- Other news stories list -->
+				<ul class = "ranked_section_list">
+					<!-- News story 1 -->
+					<li class = "ranked_section_list_item">
+						<article class = "ranked_section_article">
+							<img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/CSS/HTML%20&%20CSS%20Mini-Project/assets/images/image-retro-pcs.jpg?raw=true"
+								alt = "cool retro pea seas with floppy disks, controllers, joysticks and gameboys" 
+								class = "ranked_section_image" />
+							<h3 class = "ranked_section_number">01</h3>
+							<h4 class = "ranked_section_heading">Reviving Retro PCs</h4>
+							<p class = "ranked_section_paragraph">What happens when old PCs are given modern upgrades?</p>
+						</article>
+					</li>
+
+					<!-- News story 2 -->
+					<li class = "ranked_section_list_item">
+						<article class = "ranked_section_article">
+							<img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/CSS/HTML%20&%20CSS%20Mini-Project/assets/images/image-top-laptops.jpg?raw=true"
+								alt = "close up of a laptop keyboard with red keys"
+								class = "ranked_section_image" />
+							<h3 class = "ranked_section_number">02</h3>
+							<h4 class = "ranked_section_heading">Top 10 Laptops of 2022</h4>
+							<p class = "ranked_section_paragraph">Our best picks for various needs and budgets.</p>
+						</article>
+					</li>
+
+					<!-- News story 3 -->
+					<li class = "ranked_section_list_item">
+						<article class = "ranked_section_article">
+							<img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/CSS/HTML%20&%20CSS%20Mini-Project/assets/images/image-gaming-growth.jpg?raw=true"
+								alt = "white play station 3 controlle being caught by a left hand"
+								class = "ranked_section_image" />
+							<h3 class = "ranked_section_number">03</h3>
+							<h4 class = "ranked_section_heading">The Growth of Gaming</h4>
+							<p class = "ranked_section_paragraph">How the pandemic has sparked fresh opportunities.</p>
+						</article>
+					</li>
+				</ul>
+			</section>
+		</main>
 	</body>
 </html>
