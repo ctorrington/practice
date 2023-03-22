@@ -6,31 +6,82 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Style a HTML Page</title>
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   </head>
   <body>
-        <section id = "intro">
-            <p class = "name">How's it? My name is <span>Christopher Torrington</span></p>
-            <p>I grew up and went to school in Cape Town, South Africa, <i>obviously</i>. I would longboard after school with my friends, mountain bike with my family and sometimes go surfing (something that I wish I did more of).</p>
-            <p>After high school I moved to the UK for university. I studied Computer Science at the university of Greenwich.</p>
-            <p>Some exciting projects that I worked on include:</p>
-            <ul>
-                <li>Reinforcement Learning for the Container Loading Problem</li>
-                <li>Shortest Path Algorithm with Dijkstra for London Underground</li>
-                <li>Multi-Threaded Command Line Interface Application with Python Sockets</li>
-            </ul>
-            <p>While studying I worked as an assistant to the Timetable Officer for the Business Faculty. I worked there for two and a half years.</p>
-            <p>I am happy with how I spent my time and a glad with where I turned out.</p>
-            <p>Some further information can be found on my <a href = "https://www.linkedin.com/in/christopher-torrington/">LinkedIn</a>.</p>
-            <p>My past, current and future projects can be found on my <a href = "https://github.com/ctorrington">Github</a>.</p>
-        </section>
+    <nav>
+        <ul class = "navlinks">
+            <li>
+                <a href = "#">
+                    <i class="fas fa-code" aria-hidden="true"></i>
+                    Christopher Torrington
+                </a>
+            </li>
+            <li><a href = "#">Projects</a></li>
+            <li><a href = "#">About</a></li>
+            <li><a href = "#">Contact</a></li>
+            <li>
+                <a href = "#">
+                    <i class = "fa-brands fa-linkedin"></i>
+                    <span class = "sr-only">LinkedIn</span>
+                </a>
+            </li>
+            <li>
+                <a href = "#">
+                    <i class = "fa-brands fa-square-github"></i>
+                    <span class = "sr-only">Github</span>
+                </a>
+            </li>
+            <li><a href = "#" class = "call-to-action">Resume</a></li>
+        </ul>
+    </nav>
+    <section id = "intro">
+        <p class = "name">How's it? My name is <span>Christopher Torrington</span></p>
+        <p>I grew up and went to school in Cape Town, South Africa, <i>obviously</i>. I would longboard after school with my friends, mountain bike with my family and sometimes go surfing (something that I wish I did more of).</p>
+        <p>After high school I moved to the UK for university. I studied Computer Science at the university of Greenwich.</p>
+        <p>Some exciting projects that I worked on include:</p>
+        <ul>
+            <li>Reinforcement Learning for the Container Loading Problem</li>
+            <li>Shortest Path Algorithm with Dijkstra for London Underground</li>
+            <li>Multi-Threaded Command Line Interface Application with Python Sockets</li>
+        </ul>
+        <p>While studying I worked as an assistant to the Timetable Officer for the Business Faculty. I worked there for two and a half years.</p>
+        <p>I am happy with how I spent my time and a glad with where I turned out.</p>
+        <p>Some further information can be found on my <a href = "https://www.linkedin.com/in/christopher-torrington/">LinkedIn</a>.</p>
+        <p>My past, current and future projects can be found on my <a href = "https://github.com/ctorrington">Github</a>.</p>
+    </section>
 
+    <section class = "project">
+        <h3>Projects I'm proud of</h3>
+        <ul>
+            <li>Latest Project</li>
+            <li>
+                <dt>Wall of Wonder</dt>
+                    <dd>Description of the project.</dd>
+            </li>
+        </ul>
+        <!-- This should be fairly concise while also describing the key
+        components that you developed or worked on. It can be as long as you need it
+        to be but should at least be a few sentences long. Be sure to include
+        specific links anywhere in the description. A link looks like
+        <a href = "https://frontendmasters.github.io/grid-flexbox-v2/">this</a>, and
+        multiple links look <a href = "#">like this</a> and <a href = "#">like this</a>.
+        Technologies used include: HTML CSS SVG
+        <img src = "https://assets.codepen.io/296057/fem-gettingstartedcss-ch5-1.png" alt = "Screenshot of the Wall of Wonder." /> -->
+    </section>
 
-        <footer>
+    <div class = "gradient">
+    </div>
+    <footer id = "contact">
+        <article class = "contact-section">
+            <h2>Contact Me</h2>
+            <p>I really would like to hear from you, seriously please do contact me through the email below.</p>
             <address>
-                <h2>Contact Me</h2>
-                <p>I really would like to hear from you, seriously please do contact me through the email below.</p>
                 <a href = "mailto:christopher.torrington@gmail.com">Email</a>
             </address>
-        </footer>
+        </article>
+    </footer>
+    <div class = "gradient">
+    </div>
   </body>
 </html>
