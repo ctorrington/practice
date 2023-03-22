@@ -125,6 +125,63 @@ nav [class *= "fa"]:hover {
   display: block;
 }
 
+
+/* Project Section */
+
+#projects {
+    padding: 4rem 1rem;
+}
+
+#projects h2 {
+    font-size: 2.5rem;
+    margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+    color: var(--aqua);
+    margin-bottom: calc(1.5rem * 1.5);
+}
+
+#projects h4 {
+    font-size: 1rem;
+    font-family: var(--mono);
+}
+
+#projects ul {
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+    justify-content: flex-start;
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+#projects li {
+    list-style-type: none;
+}
+
+#projects img {
+    margin: 2rem 0 4rem 0;
+    padding: 0.2rem;
+    border-top: 1px solid var(--aqua);
+    border-left: 1px solid var(--aqua);
+    border-radius: 14px;
+    width: 100%;
+}
+
+
+.black-box {
+    background-color: var(--black);
+    border-radius: 7px;
+    padding: 1rem;
+    color: var(--white);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
 /* contact section */
 
 #contact {
@@ -150,6 +207,10 @@ nav [class *= "fa"]:hover {
     background: linear-gradient(90deg, rgba(255,0,225,1) 0%, rgba(0,255,255,1) 100%);
 }
 
+.section-dkblue {
+    background-color: var(--dkblue);
+}
+
 
 
 @media screen and (min-width: 750px) {
@@ -162,5 +223,34 @@ nav [class *= "fa"]:hover {
     nav {
         max-width: 1200px;
         margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 550px){
+    #projects article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+
+    #projects .text {
+        order: 2;
+        text-align: right;
+    }
+
+    #projects ul {
+        justify-content: flex-end;
+    }
+
+    .image {
+        grid-column: 1/7;
+    }
+
+    .text {
+        grid-column: 5/11;
+    }
+
+    .image, .text {
+        grid-row: 1/2;
     }
 }
