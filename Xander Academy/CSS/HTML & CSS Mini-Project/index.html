@@ -5,29 +5,37 @@
 		<meta name = "viewport" content = "width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
 		<link rel = "icon" type = "image/png" sizes = "32x32" href = "./assets/images/favicon-32x32.png">
+		<link rel = "stylesheet" href = "styles.css">
 
 		<title>News homepage</title>
 	</head>
 	<body>
-		<main>
+		<main class = "main">
+			<section class = "navigation_section">
+				<!-- Navigation -->
+				<img src = "https://raw.githubusercontent.com/ctorrington/practice/77939c7f6deb1b0ffa0386b5ee4e32ed97c95b01/Xander%20Academy/CSS/HTML%20%26%20CSS%20Mini-Project/assets/images/logo.svg"
+					alt = "Website logo, W"
+					class = "navigation_section_logo_image" />
 
-			<!-- Navigation -->
-			<nav class = "navigation">
-				<ul class = "navigation_list">
-					<li class = "navigation_list_item">Home</li>
-					<li class = "navigation_list_item">New</li>
-					<li class = "navigation_list_item">Popular</li>
-					<li class = "navigation_list_item">Trending</li>
-					<li class = "navigation_list_item">Categories</li>
-				</ul>    
-			</nav>
+				<nav class = "navigation">
+					<ul class = "navigation_list">
+						<li class = "navigation_list_item">Home</li>
+						<li class = "navigation_list_item">New</li>
+						<li class = "navigation_list_item">Popular</li>
+						<li class = "navigation_list_item">Trending</li>
+						<li class = "navigation_list_item">Categories</li>
+					</ul>    
+				</nav>
+			</section>
 
 			<!-- Main section -->
 			<section class = "main_section">
 				<article class = "main_section_article">
 					<img src = "https://github.com/ctorrington/practice/blob/master/Xander%20Academy/CSS/HTML%20&%20CSS%20Mini-Project/assets/images/image-web-3-desktop.jpg?raw=true"
 						alt = "cool looking tech image"
-						class = "main_section_image" />
+						class = "main_section_image" 
+						widht = 150
+						height = 150 />
 
 					<!-- Main article heading -->
 					<h1 class = "main_section_heading">The Bright Future of Web 3.0?</h1>
@@ -61,8 +69,8 @@
 			</section>
 
 
+			<!-- Ranked Section -->
 			<section class = "ranked_section">
-				<!-- Other news stories list -->
 				<ul class = "ranked_section_list">
 					<!-- News story 1 -->
 					<li class = "ranked_section_list_item">
