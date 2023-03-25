@@ -1,6 +1,10 @@
-let hamburger = document.getElementById('hamburger');
-let side_panel = document.getElementById('side_panel');
+document.addEventListener('DOMContentLoaded', function(event) {
 
-hamburger.addEventListener('click', function() {
-    side_panel.classList.toggle('open');
-})
+    const hamburger = document.getElementById('hamburger');
+    const side_panel = document.getElementById('side_panel');
+
+    hamburger.addEventListener('click', function() {
+        side_panel.classList.toggle('open');
+        console.log("i swear if this prints");
+    })
+});

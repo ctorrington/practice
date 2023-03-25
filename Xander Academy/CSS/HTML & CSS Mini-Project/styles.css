@@ -1,3 +1,37 @@
+/* 
+A note on the CSS standard
+
+Nesting in css makes me cry.
+
+"article figure ul li" means absolutely nothing, even if there is only one such structure.
+It requires developers to go and look at the coded hierachy and find exactly where it begins,
+    why not just start at "figure ul li"?
+Why not go "html body article figure ul li"?
+Are there any others that I do not want affected? Do I, like, need another div...?
+There is no way that it is consistent.
+It makes it far too easy to accidently work in the wrong ruleset, eg. "figure ul li" is surely the right one.
+It requires understanding not just of the hmtl structure, but also painful understanding of the css "structure".
+An unnecessary waste of time.
+
+My approach is to assign classes to all elements that have descendants.
+This ensures that each element can be easily targeted without confusion.
+If the html is structured properly, the css should read easily as well.
+".navigation_section_title" reads much easier than, ".nav article li:fist-child".
+It is not necessary for list items or paragraphs to require classes, for example,
+    ".navigation_list li" is descriptive enough, if organised logically.
+
+
+The idea is that, while writing the html classes requires more work, it allows for instant lookups in
+    the css file; infering the correct rule based on proper naming without needing to leave the css file 
+    to understand what "article ul li" is going to change.
+The class names in the html should reflect the hierarchy of the document. 
+*/
+
+
+
+
+
+
 /* IMPORTS */
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
@@ -141,7 +175,7 @@ section, nav, h1, p {
 /* MOBILE */
 
 
-@media screen and (min-width: 100px){
+@media screen and (min-width: 1px){
 
 
     /* Navigation Section */
@@ -167,6 +201,24 @@ section, nav, h1, p {
     .navigation_section_hamburger_button {
         background-color: white;
         border: 0;
+    }
+
+
+    #side_panel {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background-color: black;
+        height: 100%;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 9999;
+    }
+
+
+    #side_panel.open {
+        transform: translateX(0);
     }
 
 
@@ -199,9 +251,22 @@ section, nav, h1, p {
         object-fit: cover;
     }
 
+    
+    .main_section_button {
+        margin-bottom: 20px;
+    }
+
 
     .main_section_heading, .main_section_paragraph {
         margin: 10px 0px;
+    }
+
+
+    /* New Section */
+
+
+    .new_section {
+        margin-bottom: 20px;
     }
 
 
@@ -210,6 +275,12 @@ section, nav, h1, p {
 
     .ranked_section_list li {
         padding: 10px;
+    }
+
+
+    .ranked_section_image {
+        width: 30%;
+        height: 30%;
     }
 
 
@@ -226,7 +297,7 @@ section, nav, h1, p {
 /* DESKTOP */
 
 
-@media screen and (min-width: 600px){
+@media screen and (min-width: 376px){
     .main {
         display: grid;
         grid-template-columns: repeat(3, 33%);
@@ -252,6 +323,11 @@ section, nav, h1, p {
         width: 100%;
 
         margin: 0 auto;
+    }
+
+
+    .navigation_section_hamburger_button {
+        display: none;
     }
 
 
