@@ -6,12 +6,11 @@ Nesting in css makes me cry.
 "article figure ul li" means absolutely nothing, even if there is only one such structure.
 It requires developers to go and look at the coded hierachy and find exactly where it begins,
     why not just start at "figure ul li"?
-Why not go "html body article figure ul li"?
+Why not go "html body main article figure ul li"?
 Are there any others that I do not want affected? Do I, like, need another div...?
 There is no way that it is consistent.
 It makes it far too easy to accidently work in the wrong ruleset, eg. "figure ul li" is surely the right one.
 It requires understanding not just of the hmtl structure, but also painful understanding of the css "structure".
-An unnecessary waste of time.
 
 My approach is to assign classes to all elements that have descendants.
 This ensures that each element can be easily targeted without confusion.
@@ -58,6 +57,8 @@ The class names in the html should reflect the hierarchy of the document.
 
     /* sans-serif is a back up font here, incase 'Inter' is not availbe on the requsting machine */
     font-family: 'Inter', sans-serif;
+
+    cursor: progress;   /* :) */
 }
 
 main {
@@ -89,6 +90,24 @@ section, nav, h1, p {
 }
 
 
+/* Navigation Section */
+
+.navigation_list li a {
+    text-decoration: none;
+
+    color: var(--very_dark_blue);
+}
+
+
+.navigation_list li a:hover {
+    transition: 0.4s;
+
+    color: var(--soft_orange);
+
+    cursor: pointer;
+}
+
+
 
 /* Main Section */
 
@@ -110,6 +129,25 @@ section, nav, h1, p {
 }
 
 
+.main_section_button:hover {
+    transition: 0.4s;
+    
+    background-color: var(--very_dark_blue);
+
+    cursor: pointer;
+}
+
+
+.main_section_button_text {
+    padding: 3px 5px;
+    margin: 0;
+
+    color: var(--off_white);
+
+    cursor: pointer;
+}
+
+
 /* New Section */
 
 
@@ -121,27 +159,43 @@ section, nav, h1, p {
 
 .new_section_heading {
     color: var(--soft_orange);
-
-    /* margin-bottom: 10px; */
 }
 
 
 .new_section_list dt {
-    color: white;
-
     margin-top: 30px;
     margin-bottom: 10px;
 }
 
 
+.new_section_list dt a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.new_section_list dt a:hover {
+    transition: 0.4s;
+
+    color: var(--soft_orange);
+
+    cursor: pointer;
+}
+
+
 .new_section_list dd {
-    color: var(--off_white);
+    color: var(--grayish_blue);
 
     margin-bottom: 20px;
 }
 
 
 /* Ranked Section */
+
+
+.ranked_section_list {
+    list-style-type: none;
+}
 
 
 .ranked_section_article {
@@ -162,9 +216,25 @@ section, nav, h1, p {
     color: var(--grayish_blue);
 }
 
+
 .ranked_section_image_description h4 {
     margin-bottom: 10px;
 }
+
+
+.ranked_section_image_description h4 a {
+    text-decoration: none;
+
+    color: var(--very_dark_blue);
+}
+
+
+.ranked_section_image_description h4 a:hover {
+    transition: 0.4s;
+    color: var(--red);
+    cursor: pointer;
+}
+
 
 .ranked_section_image_description p {
     margin: 0;
@@ -205,6 +275,7 @@ section, nav, h1, p {
 
 
     #side_panel {
+        display: contents;
         position: fixed;
         top: 0;
         right: 0;
@@ -219,13 +290,7 @@ section, nav, h1, p {
 
     #side_panel.open {
         transform: translateX(0);
-    }
-
-
-    /* Side Panel Section */
-
-
-    #side_panel.open {
+        display: contents;
         right: 0;
     }
 
@@ -441,8 +506,6 @@ section, nav, h1, p {
     .ranked_section_list {
         display: flex;
         flex-direction: row;
-    
-        list-style-type: none;
     }
 
     
