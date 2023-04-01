@@ -7,6 +7,11 @@ const btnContainer = getElement('#btn-container');
 const productContainer = getElement('#productslist-container');
 
 
+searchInput.addEventListener("input", (e) => {
+    console.log(e);
+})
+
+
 console.log(searchInput);
 console.log(btnContainer);
 console.log(productContainer);
