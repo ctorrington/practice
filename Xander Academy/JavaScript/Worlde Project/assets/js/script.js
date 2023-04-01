@@ -160,7 +160,9 @@ function makeMap(word_arary) {
     const obj = {};
 
     for (let i = 0; i < word_array.length; i++) {
-        if (obj)
+        if (obj.hasOwnProperty(word_array[i])) {
+            
+        }
     }
 }
 

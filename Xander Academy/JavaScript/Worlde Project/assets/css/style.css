@@ -78,7 +78,6 @@ body {
 /* Tile styles */
 
 #tile-container {
-    position: relative;
      background: rgb(69,115,94);
     background: linear-gradient(45deg, rgba(69,115,94,1) 0%, rgba(9,79,121,1) 100%);
     position: absolute;
