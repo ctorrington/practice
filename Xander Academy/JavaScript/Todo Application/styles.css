@@ -96,7 +96,13 @@ body, .dark{
 }
 
 
+/* TASK LIST SECTION */
+
+
 .task_list_section {
+    display: flex;
+    flex-direction: column-reverse;
+
     color: white;
 }
 
