@@ -1,9 +1,157 @@
+
+:root {
+    --very-dark-blue: hsl(235, 21%, 11%);
+    --very-dark-desaturated-blue: hsl(235, 24%, 19%);
+    --light-grayish-blue: hsl(234, 39%, 85%);
+    --dark-grayish-blue: hsl(234, 11%, 52%);
+    --veryd-dark-grayish-blue: hsl(233, 14%, 35%);
+    --very-dark-grayish-blue: hsl(237, 14%, 26%);
+}
+
+
+/* --light-grayish-blue (hover): hsl(236, 33%, 92%); */
+
+/* GLOBAL STYLES */
+
+body, .dark{
+    background-color: var(--very-dark-grayish-blue);
+}
+
+
+/* MAIN SECTION */
+
+
+.main_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* PAGE HEADING SECTION */
+
+
+.page_heading_section {
+    display: flex;
+    justify-content: center;
+    align-items: space-between;
+}
+
+
+.page_heading_section svg {
+    margin: auto 0;
+}
+
+
+/* .dark_mode_sun_icon, .dark {
+    display: block;
+}
+
+
+.dark_mode_sun_icon, .light {
+    display: none;
+}
+
+
+.light_mode_moon_icon, .dark {
+    display: none;
+}
+
+
+.light_mode_moon_icon, .light {
+    display: block;
+} */
+
+
+/* NEW TASK CONTAINER SECTION */
+
+
+.new_task_container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+
+.new_task_container button {
+    border-radius: 50%;
+    border: 1px solid white;
+
+    width: 30px;
+    height: 30px;
+}
+
+
+.new_task_container form {
+    margin-bottom: 0 0 20px;
+}
+
+
+
+
+
+.page_heading_section h1 {
+    color: white;
+}
+
+
+.task_list {
+    color: white;
+}
+
+
 .attribution { 
     font-size: 11px; 
-    text-align: center; 
+    text-align: center;
+    color: white;
 }
 
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
 }
+
+
+
+
+
+/* MOBILE STYLES */
+
+@media screen and (min-width: 1px){
+
+    .main_section, .dark {
+        background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-mobile-dark.jpg?raw=true");
+    }
+
+    .main_section, .light {
+        background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-mobile-light.jpg?raw=true");
+    }
+
+
+}
+
+
+
+
+
+/* DESKTOP STYLES */
+
+@media screen and (min-width: 376px){
+
+    .main_section, .dark {
+        background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-dark.jpg?raw=true")
+    }
+
+    .main_section, .light {
+        background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-light.jpg?raw=true");
+    }
+
+
+
+}
+
+
+
+
+
