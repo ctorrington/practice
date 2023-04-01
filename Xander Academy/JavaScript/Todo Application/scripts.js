@@ -31,18 +31,17 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    // Create new list item.
+    // Create new task displayed in the list.
     function createNewTaskListItem(task) {
         // This function adds the new task as a list item, the complete,
-        // & delete buttons. These elements are all nested into a div.
+        // & delete buttons. These elements are all nested into a div,
+        // with the div being the child of the task list.
 
         // creates the task complete button.
         let new_task_complete_button = document.createElement('button');
         new_task_complete_button.setAttribute('id', `${task}_complete`);
         new_task_complete_button.setAttribute('class', "task_complete_button");
 
-
-        // Create the list.
 
         // Create the list item element.
         let new_task_list_item = document.createElement('li');
@@ -56,27 +55,31 @@ document.addEventListener("DOMContentLoaded", () => {
         // i.e. give the list item a value.
         new_task_list_item.appendChild(new_task_list_item_text_node);
 
-        // Add the new list item, now with a value, to the unordered list.
-        // task_list.appendChild(new_task_list_item);
-
 
         // Create the task remove button.
         let new_delete_task_button = document.createElement('button');
         new_delete_task_button.setAttribute('id', `${task}_delete`);
         new_delete_task_button.setAttribute('class', "task_delete_button");
 
+
+        // Another div to align the list elments correctly on the left.
+        let left_align_container = document.createElement('div');
+        left_align_container.setAttribute('class', 'left_align_container');
+
+
         // Create the div container for the list item elements (task & 2 buttons).
         let new_task_container = document.createElement('div');
         new_task_container.setAttribute('class', 'task_container');
-        new_task_container.appendChild(new_task_complete_button);
-        new_task_container.appendChild(new_task_list_item);
+
+        // Nest all the elements for the task.
+        left_align_container.appendChild(new_task_complete_button);
+        left_align_container.appendChild(new_task_list_item);
+
+        new_task_container.appendChild(left_align_container);
         new_task_container.appendChild(new_delete_task_button);
 
-
-
-
-        task_list.appendChild(new_task_container);
-
+        // This appends new tasks to the top of the unordered list.
+        task_list.insertBefore(new_task_container, task_list.firstChild)
     };
 
 

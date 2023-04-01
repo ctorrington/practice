@@ -111,16 +111,37 @@ body, .dark{
     list-style-type: none;
 }
 
+
+.task_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: var(--dark-grayish-blue);
+}
+
+
+.left_align_container {
+    display: flex;
+
+    align-items: center;
+}
+
+
 .task_complete_button {
     display: block;
     width: 30px;
     height: 30px;
+
+    border-radius: 50%;
 }
 
 .task_delete_button {
     display: block;
     width: 30px;
     height: 30px;
+
+    justify-content: right;
 }
 
 
