@@ -96,8 +96,13 @@ body, .dark{
 }
 
 
-.task_list {
+.task_list_section {
     color: white;
+}
+
+
+.task_list {
+    list-style-type: none;
 }
 
 
@@ -129,6 +134,14 @@ body, .dark{
     }
 
 
+
+    /* TASK LIST SECTION */
+
+
+    .tasks_remaining, .clear_completed_tasks_button {
+        display: none;
+    }
+
 }
 
 
@@ -148,6 +161,11 @@ body, .dark{
     }
 
 
+    /* TASK LIST SECTION */
+
+    .tasks_remaining, .clear_completed_tasks_button {
+        display: inline;
+    }
 
 }
 
