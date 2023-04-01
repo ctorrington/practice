@@ -41,6 +41,10 @@ document.addEventListener("DOMContentLoaded", () => {
         let new_task_complete_button = document.createElement('button');
         new_task_complete_button.setAttribute('id', `${task}_complete`);
         new_task_complete_button.setAttribute('class', "task_complete_button");
+        // Event listener for task completion.
+        new_task_complete_button.addEventListener('click', function(){
+            taskCompleted(task);
+        });
 
 
         // Create the list item element.
@@ -88,6 +92,25 @@ document.addEventListener("DOMContentLoaded", () => {
         taskList.push({'task': task, 
                         'status': 'active'});
         console.log(taskList);
+    };
+
+    // Task is marked as completed.
+    function taskCompleted(task) {
+        for (element of taskList) {
+
+            // Find the task in the task list.
+            if (task === element.task){
+
+                // Mark the task as completed.
+                if (element.status === "active") {
+                    element.status = "completed";
+                    document.getElementById(`${element.task}_task`).style.textDecoration = "line-through";
+                } else {
+                    element.status = "active";
+                    document.getElementById(`${element.task}_task`).style.textDecoration = "none";
+                }
+            }
+        }
     };
 
 
