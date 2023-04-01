@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_complete_button.setAttribute('id', `${task}_complete`);
         new_task_complete_button.setAttribute('class', "task_complete_button");
         // Event listener for task completion.
-        new_task_complete_button.addEventListener('click', function(){
+        new_task_complete_button.addEventListener('click', function() {
             taskCompleted(task);
         });
 
@@ -64,6 +64,9 @@ document.addEventListener("DOMContentLoaded", () => {
         let new_delete_task_button = document.createElement('button');
         new_delete_task_button.setAttribute('id', `${task}_delete`);
         new_delete_task_button.setAttribute('class', "task_delete_button");
+        new_delete_task_button.addEventListener('click', function() {
+            taskDeleted(task);
+        })
 
 
         // Another div to align the list elments correctly on the left.
@@ -73,6 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create the div container for the list item elements (task & 2 buttons).
         let new_task_container = document.createElement('div');
+        new_task_container.setAttribute('id', `${task}_container`)
         new_task_container.setAttribute('class', 'task_container');
 
         // Nest all the elements for the task.
@@ -112,6 +116,24 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     };
+
+    function taskDeleted(task) {
+
+        let i = 0;
+
+        for (element of taskList) {
+
+            // Find the task to be deleted.
+            if (element.task === task) {
+                taskList.splice(i, 1);
+                document.getElementById(`${task}_container`).remove();
+                break;
+            }
+
+
+            i += 1;
+        }
+    }
 
 
     // Add the new task to the displayed tasks.
