@@ -111,6 +111,18 @@ body, .dark{
     list-style-type: none;
 }
 
+.task_complete_button {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
+.task_delete_button {
+    display: block;
+    width: 30px;
+    height: 30px;
+}
+
 
 .attribution { 
     font-size: 11px; 

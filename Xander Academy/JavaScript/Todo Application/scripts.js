@@ -33,9 +33,21 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Create new list item.
     function createNewTaskListItem(task) {
+        // This function adds the new task as a list item, the complete,
+        // & delete buttons. These elements are all nested into a div.
+
+        // creates the task complete button.
+        let new_task_complete_button = document.createElement('button');
+        new_task_complete_button.setAttribute('id', `${task}_complete`);
+        new_task_complete_button.setAttribute('class', "task_complete_button");
+
+
+        // Create the list.
 
         // Create the list item element.
         let new_task_list_item = document.createElement('li');
+        new_task_list_item.setAttribute('id', `${task}_task`);
+        new_task_list_item.setAttribute('class', "task_list_element");
 
         // Create the actual list item value.     See more, https://www.w3schools.com/jsref/met_node_appendchild.asp
         let new_task_list_item_text_node = document.createTextNode(task);
@@ -45,7 +57,26 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_list_item.appendChild(new_task_list_item_text_node);
 
         // Add the new list item, now with a value, to the unordered list.
-        task_list.appendChild(new_task_list_item);
+        // task_list.appendChild(new_task_list_item);
+
+
+        // Create the task remove button.
+        let new_delete_task_button = document.createElement('button');
+        new_delete_task_button.setAttribute('id', `${task}_delete`);
+        new_delete_task_button.setAttribute('class', "task_delete_button");
+
+        // Create the div container for the list item elements (task & 2 buttons).
+        let new_task_container = document.createElement('div');
+        new_task_container.setAttribute('class', 'task_container');
+        new_task_container.appendChild(new_task_complete_button);
+        new_task_container.appendChild(new_task_list_item);
+        new_task_container.appendChild(new_delete_task_button);
+
+
+
+
+        task_list.appendChild(new_task_container);
+
     };
 
 
