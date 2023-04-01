@@ -85,7 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Add the entered task to the list of tasks.
     function addNewTask(task) {
-        taskList.push(task);
+        taskList.push({'task': task, 
+                        'status': 'active'});
         console.log(taskList);
     };
 
