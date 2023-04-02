@@ -130,8 +130,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Remove the containing div from the DOM.
         document.getElementById(`${DeletionTargetId.split('_')[0]}_container`).remove();
 
-        document.getElementById(`${DeletionTargetId.split}`);
-
+        delete taskListHashTable[`${DeletionTargetId.split('_')[0]}_task`];
         // for (element of taskList) {
 
         //     // Find the task to be deleted.
