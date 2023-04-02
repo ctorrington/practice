@@ -4,8 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
     let new_task_input = document.getElementById('new_task_input');
     let new_task_form = document.getElementById('new_task_form');
     let task_list = document.getElementById('task_list');
+
     let active_filter_button = document.getElementById('active_filter_button');
     let all_filter_button = document.getElementById('all_filter_button');
+    let completed_filter_button = document.getElementById('completed_filter_button');
+
+
 
     // Variables.
     let taskListHashTable = {};
@@ -52,7 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (taskListHashTable[element].status === 'active') {
 
                 // Set the element to display.
-                document.getElementById(`${getID(element)}_container`).style.display = "content";
+                document.getElementById(`${getID(element)}_container`).style.display = "";
             } else {
 
                 // Set the element to hide;
@@ -60,6 +64,25 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         }
     });
+
+    completed_filter_button.addEventListener('click', (e) => {
+        for (element in taskListHashTable) {
+            // Find the elements with completed status.
+            if (taskListHashTable[element].status === 'completed') {
+
+                // Set the element to display.
+                document.getElementById(`${getID(element)}_container`).style.display = "";
+            } else {
+
+                // Set the element to hide;
+                document.getElementById(`${getID(element)}_container`).style.display = "none";
+            };
+        };
+    });
+
+
+
+
 
 
     // A function to return the ID free without the descriptor.
