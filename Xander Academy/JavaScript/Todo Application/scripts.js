@@ -37,9 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
         // & delete buttons. These elements are all nested into a div,
         // with the div being the child of the task list.
 
+        let taskCreationTime = new Date().getTime();
+
+
         // creates the task complete button.
         let new_task_complete_button = document.createElement('button');
-        new_task_complete_button.setAttribute('id', `${task}_complete`);
+        new_task_complete_button.setAttribute('id', `${taskCreationTime}_complete`);
         new_task_complete_button.setAttribute('class', "task_complete_button");
         // Event listener for task completion.
         new_task_complete_button.addEventListener('click', function() {
@@ -49,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create the list item element.
         let new_task_list_item = document.createElement('li');
-        new_task_list_item.setAttribute('id', `${task}_task`);
+        new_task_list_item.setAttribute('id', `${taskCreationTime}_element`);
         new_task_list_item.setAttribute('class', "task_list_element");
 
         // Create the actual list item value.     See more, https://www.w3schools.com/jsref/met_node_appendchild.asp
@@ -62,10 +65,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create the task remove button.
         let new_delete_task_button = document.createElement('button');
-        new_delete_task_button.setAttribute('id', `${task}_delete`);
+        new_delete_task_button.setAttribute('id', `${taskCreationTime}_delete`);
         new_delete_task_button.setAttribute('class', "task_delete_button");
-        new_delete_task_button.addEventListener('click', function() {
-            taskDeleted(task);
+        // Send theparent of the task to be deleted (the container div),
+        // as target of the event target 
+        new_delete_task_button.addEventListener('click', function(e) {
+            taskDeleted(e.target.getAttribute('id'));
         })
 
 
@@ -76,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Create the div container for the list item elements (task & 2 buttons).
         let new_task_container = document.createElement('div');
-        new_task_container.setAttribute('id', `${task}_container`)
+        new_task_container.setAttribute('id', `${taskCreationTime}_container`)
         new_task_container.setAttribute('class', 'task_container');
 
         // Nest all the elements for the task.
@@ -87,7 +92,10 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_container.appendChild(new_delete_task_button);
 
         // This appends new tasks to the top of the unordered list.
-        task_list.insertBefore(new_task_container, task_list.firstChild)
+        task_list.insertBefore(new_task_container, task_list.firstChild);
+
+
+        // document.getElementById(`${task}_container`).style.display = "none";
     };
 
 
@@ -117,22 +125,26 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    function taskDeleted(task) {
-
-        let i = 0;
-
-        for (element of taskList) {
-
-            // Find the task to be deleted.
-            if (element.task === task) {
-                taskList.splice(i, 1);
-                document.getElementById(`${task}_container`).remove();
-                break;
-            }
+    function taskDeleted(DeletionTargetId) {
 
 
-            i += 1;
-        }
+        // Remove the containing div from the DOM.
+        document.getElementById(`${DeletionTargetId.split('_')[0]}_container`).remove();
+
+        document.getElementById(`${DeletionTargetId.split}`);
+
+        // for (element of taskList) {
+
+        //     // Find the task to be deleted.
+        //     if (element.task === task) {
+        //         taskList.splice(i, 1);
+        //         document.getElementById(`${task}_container`).remove();
+        //         break;
+        //     }
+
+
+        //     i += 1;
+        // }
     }
 
 
