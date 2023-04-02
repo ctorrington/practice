@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let new_task_form = document.getElementById('new_task_form');
     let task_list = document.getElementById('task_list');
     let active_filter_button = document.getElementById('active_filter_button');
+    let all_filter_button = document.getElementById('all_filter_button');
 
     // Variables.
     let taskListHashTable = {};
@@ -36,21 +37,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    
+    all_filter_button.addEventListener('click', (e) => {
+        for (element in taskListHashTable) {
+            document.getElementById(`${getID(element)}_container`).style.display = "";
+        };
+    });
 
 
 
     active_filter_button.addEventListener('click', (e) => {
-        console.log("active clicked")
         for (element in taskListHashTable) {
 
-            console.log(taskListHashTable[element])
             // Find the elements with active status.
             if (taskListHashTable[element].status === 'active') {
-                console.log("active status found")
+
                 // Set the element to display.
                 document.getElementById(`${getID(element)}_container`).style.display = "content";
             } else {
+
                 // Set the element to hide;
                 document.getElementById(`${getID(element)}_container`).style.display = "none";
             }
