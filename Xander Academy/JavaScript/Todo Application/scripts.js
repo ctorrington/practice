@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let new_task_input = document.getElementById('new_task_input');
     let new_task_form = document.getElementById('new_task_form');
     let task_list = document.getElementById('task_list');
+    let active_filter_button = document.getElementById('active_filter_button');
 
     // Variables.
     let taskListHashTable = {};
@@ -13,12 +14,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // Event listeners.
 
     // Prevent default form behaviour.
-    new_task_form.addEventListener("submit", (e) => {
+    new_task_form.addEventListener('submit', (e) => {
         e.preventDefault();
     })
 
     // Handle enter pressed on task input.
-    new_task_input.addEventListener("keydown", (e) => {
+    new_task_input.addEventListener('keydown', (e) => {
 
         // Continue if task is entered & enter key is pressed.
         if (e.key === "Enter" && new_task_input.value != "") {
@@ -33,6 +34,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
         
     });
+
+
+    
+
+
+
+    active_filter_button.addEventListener('click', (e) => {
+        console.log("active clicked")
+        for (element in taskListHashTable) {
+
+            console.log(taskListHashTable[element])
+            // Find the elements with active status.
+            if (taskListHashTable[element].status === 'active') {
+                console.log("active status found")
+                // Set the element to display.
+                document.getElementById(`${getID(element)}_container`).style.display = "content";
+            } else {
+                // Set the element to hide;
+                document.getElementById(`${getID(element)}_container`).style.display = "none";
+            }
+        }
+    });
+
+
+    // A function to return the ID free without the descriptor.
+    function getID(id) {
+        return id.split('_')[0];
+    }
 
 
     // Create new task displayed in the list.
@@ -131,18 +160,6 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById(`${DeletionTargetId.split('_')[0]}_container`).remove();
 
         delete taskListHashTable[`${DeletionTargetId.split('_')[0]}_task`];
-        // for (element of taskList) {
-
-        //     // Find the task to be deleted.
-        //     if (element.task === task) {
-        //         taskList.splice(i, 1);
-        //         document.getElementById(`${task}_container`).remove();
-        //         break;
-        //     }
-
-
-        //     i += 1;
-        // }
     }
 
 
