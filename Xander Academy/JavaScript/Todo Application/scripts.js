@@ -45,8 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_complete_button.setAttribute('id', `${taskCreationTime}_complete`);
         new_task_complete_button.setAttribute('class', "task_complete_button");
         // Event listener for task completion.
-        new_task_complete_button.addEventListener('click', function() {
-            taskCompleted(task);
+        new_task_complete_button.addEventListener('click', function(e) {
+            taskCompleted(e.target.getAttribute('id'));
         });
 
 
@@ -107,22 +107,26 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     // Task is marked as completed.
-    function taskCompleted(task) {
-        for (element of taskList) {
+    function taskCompleted(DeletionTargetId) {
+        // TODO make this a document lookup as well.
 
-            // Find the task in the task list.
-            if (task === element.task){
+        document.getElementById(`${DeletionTargetId.split('_')[0]}_element`).style.textDecoration = "line-through";
 
-                // Mark the task as completed.
-                if (element.status === "active") {
-                    element.status = "completed";
-                    document.getElementById(`${element.task}_task`).style.textDecoration = "line-through";
-                } else {
-                    element.status = "active";
-                    document.getElementById(`${element.task}_task`).style.textDecoration = "none";
-                }
-            }
-        }
+        // for (element of taskList) {
+
+        //     // Find the task in the task list.
+        //     if (task === element.task){
+
+        //         // Mark the task as completed.
+        //         if (element.status === "active") {
+        //             element.status = "completed";
+        //             document.getElementById(`${element.task}_task`).style.textDecoration = "line-through";
+        //         } else {
+        //             element.status = "active";
+        //             document.getElementById(`${element.task}_task`).style.textDecoration = "none";
+        //         }
+        //     }
+        // }
     };
 
     function taskDeleted(DeletionTargetId) {
