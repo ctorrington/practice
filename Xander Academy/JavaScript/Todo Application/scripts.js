@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let active_filter_button = document.getElementById('active_filter_button');
     let all_filter_button = document.getElementById('all_filter_button');
     let completed_filter_button = document.getElementById('completed_filter_button');
+    let clear_completed_button = document.getElementById('clear_completed_button');
 
 
 
@@ -80,6 +81,20 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
 
+
+    clear_completed_button.addEventListener('click', (e) => {
+        for (element in taskListHashTable) {
+            // Find the elements with completed status.
+            if (taskListHashTable[element].status === 'completed') {
+
+                // Delete the element form the Task List.
+                delete taskListHashTable[element];
+
+                // Remove the html elements from the DOM.
+                document.getElementById(`${element.split('_')[0]}_container`).remove();
+            };
+        };
+    });
 
 
 
