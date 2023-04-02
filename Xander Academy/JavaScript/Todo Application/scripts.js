@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let task_list = document.getElementById('task_list');
 
     // Variables.
-    let taskList = [];
+    let taskListHashTable = {};
     
 
 
@@ -22,8 +22,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Continue if task is entered & enter key is pressed.
         if (e.key === "Enter" && new_task_input.value != "") {
-            addNewTask(new_task_input.value);
-            createNewTaskListItem(new_task_input.value);
+
+            // ID used for tasks.
+            let taskCreationTime = new Date().getTime();
+
+            addNewTask(new_task_input.value, taskCreationTime);
+            createNewTaskListItem(new_task_input.value, taskCreationTime);
             new_task_input.value = "";
         };
 
@@ -32,13 +36,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Create new task displayed in the list.
-    function createNewTaskListItem(task) {
+    function createNewTaskListItem(taskName, taskCreationTime) {
         // This function adds the new task as a list item, the complete,
         // & delete buttons. These elements are all nested into a div,
         // with the div being the child of the task list.
-
-        let taskCreationTime = new Date().getTime();
-
 
         // creates the task complete button.
         let new_task_complete_button = document.createElement('button');
@@ -56,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_list_item.setAttribute('class', "task_list_element");
 
         // Create the actual list item value.     See more, https://www.w3schools.com/jsref/met_node_appendchild.asp
-        let new_task_list_item_text_node = document.createTextNode(task);
+        let new_task_list_item_text_node = document.createTextNode(taskName);
 
         // Append the text node to the list item element,
         // i.e. give the list item a value.
@@ -100,33 +101,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Add the entered task to the list of tasks.
-    function addNewTask(task) {
-        taskList.push({'task': task, 
-                        'status': 'active'});
-        console.log(taskList);
+    function addNewTask(taskName, taskCreationTime) {
+
+        taskListHashTable[`${taskCreationTime}_task`] = {
+                                                        'taskName': taskName,
+                                                        'status': 'active'}
+
+        console.log(taskListHashTable);
     };
 
     // Task is marked as completed.
-    function taskCompleted(DeletionTargetId) {
-        // TODO make this a document lookup as well.
+    function taskCompleted(CompletedTargetId) {
 
-        document.getElementById(`${DeletionTargetId.split('_')[0]}_element`).style.textDecoration = "line-through";
+        let taskListElement = taskListHashTable[`${CompletedTargetId.split('_')[0]}_task`];
 
-        // for (element of taskList) {
-
-        //     // Find the task in the task list.
-        //     if (task === element.task){
-
-        //         // Mark the task as completed.
-        //         if (element.status === "active") {
-        //             element.status = "completed";
-        //             document.getElementById(`${element.task}_task`).style.textDecoration = "line-through";
-        //         } else {
-        //             element.status = "active";
-        //             document.getElementById(`${element.task}_task`).style.textDecoration = "none";
-        //         }
-        //     }
-        // }
+        if (taskListElement.status === "active") {
+            document.getElementById(`${CompletedTargetId.split('_')[0]}_element`).style.textDecoration = "line-through";
+            taskListElement.status = "completed"
+        } else {
+            document.getElementById(`${CompletedTargetId.split('_')[0]}_element`).style.textDecoration = "none";
+            taskListElement.status = "active";
+        }
     };
 
     function taskDeleted(DeletionTargetId) {
