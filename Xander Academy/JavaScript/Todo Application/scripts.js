@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Variables.
     let taskListHashTable = {};
+    let dragContainer
     
 
 
@@ -40,6 +41,35 @@ document.addEventListener("DOMContentLoaded", () => {
 
         
     });
+
+
+    // Draggable functionality
+    // TODO
+
+    // task_list.addEventListener('dragstart', (e) => {
+    //     dragContainer = e.target;
+    //     console.log(dragContainer);
+    //     e.dataTransfer.setData('text/plain', dragContainer.innerHTML);
+    // });
+
+    // task_list.addEventListener('dragOver', (e) => {
+    //     e.preventDefault();
+    // });
+
+    // task_list.addEventListener('drop', (e) => {
+    //     let dropContainer = e.target;
+    //     let dragIndex = Array.from(task_list.children).indexOf(dragContainer);
+    //     let dropIndex = Array.from(task_list.children).indexOf(dropContainer);
+
+    //     // Swap the drap and drop elements.
+    //     if (dragIndex !== dropIndex) {
+    //         task_list.insertBefore(dragContainer, dropContainer);
+    //     };
+
+    //     dragContainer = null;
+
+    // });
+
 
 
     all_filter_button.addEventListener('click', (e) => {
@@ -155,6 +185,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let new_task_container = document.createElement('div');
         new_task_container.setAttribute('id', `${taskCreationTime}_container`)
         new_task_container.setAttribute('class', 'task_container');
+        new_task_container.setAttribute('draggable', 'true');
 
         // Nest all the elements for the task.
         left_align_container.appendChild(new_task_complete_button);
