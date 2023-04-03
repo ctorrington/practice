@@ -1,11 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
+
 
 :root {
+    /* Dark Theme */
     --very-dark-blue: hsl(235, 21%, 11%);
     --very-dark-desaturated-blue: hsl(235, 24%, 19%);
     --light-grayish-blue: hsl(234, 39%, 85%);
     --dark-grayish-blue: hsl(234, 11%, 52%);
     --veryd-dark-grayish-blue: hsl(233, 14%, 35%);
     --very-dark-grayish-blue: hsl(237, 14%, 26%);
+
+    /* Light Theme */
+    --very-light-gray: hsl(0, 0%, 98%);
+    --very-light-grayish-blue: hsl(236, 33%, 92%);
+    --light-grayish-blue: hsl(233, 11%, 84%);
+    --dark-grayish-blue: hsl(236, 9%, 61%);
+    --very-dark-grayish-blue: hsl(235, 19%, 35%);
 }
 
 
@@ -13,8 +24,18 @@
 
 /* GLOBAL STYLES */
 
+body {
+    font-size: 18px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+
 body, .dark{
     background-color: var(--very-dark-grayish-blue);
+}
+
+p, li, button, span, small, div {
+    font-weight: 400;
 }
 
 
@@ -42,26 +63,6 @@ body, .dark{
 .page_heading_section svg {
     margin: auto 0;
 }
-
-
-/* .dark_mode_sun_icon, .dark {
-    display: block;
-}
-
-
-.dark_mode_sun_icon, .light {
-    display: none;
-}
-
-
-.light_mode_moon_icon, .dark {
-    display: none;
-}
-
-
-.light_mode_moon_icon, .light {
-    display: block;
-} */
 
 
 /* NEW TASK CONTAINER SECTION */

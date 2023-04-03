@@ -1,6 +1,43 @@
+// Tasks are IDed by the time they are created.
+// JavaScript uses the same data type for all numbers, 
+// the size taken for the integer '1' is  
+// equivalent to 'Date().getTime()' in memory.
+// It is easier to just get the time than have some counting variable & 
+// since they both take the same amount of memory,
+// tasks are IDed by their creation time.
+
+// Tasks are nested into indiviual containers when they are created.
+// The containers contain the buttons for marking the task complete &
+// deleting the task; as well as the actual task description.
+// These containers are appened as child elements to the list element
+// created within the HTML file.
+// Every element within the container, including the container itself,
+// is IDed as follows: <creation time>_<element>, where <creation time>
+// is the time that the task is created & <element> is the type of element,
+// (container, element, delete, complete).
+// This ID system allows for instant lookups rather than list traversals.
+
+// Along with the tasks that are displayed within the list element,
+// described above, the tasks are tracked within a hashtable.
+// The hashtable is a JavaScript object containing named Javascript objects
+// that contain the relevant tasks properties.
+// The objects are named as follows: <creation time>_task.
+// The named objects are named with the same creation time as their
+// relevant tasks.
+// This allows instant access to task properties.
+
+// IDs are seperated with an underscore ('_') & can easily be split to
+// refer to other IDed elements.
+// This allows for easy lookups as every ID follows the same convention. E.g.
+// <time created>_complete, <time created>_element, <time created>_delete.
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", () => {
 
-    // Document elements.
+    // Document Elements.
     let new_task_input = document.getElementById('new_task_input');
     let new_task_form = document.getElementById('new_task_form');
     let task_list = document.getElementById('task_list');
@@ -9,26 +46,40 @@ document.addEventListener("DOMContentLoaded", () => {
     let all_filter_button = document.getElementById('all_filter_button');
     let completed_filter_button = document.getElementById('completed_filter_button');
     let clear_completed_button = document.getElementById('clear_completed_button');
+    let dark_mode_sun_icon = document.getElementById('dark_mode_sun_icon');
+    let light_mode_moon_icon = document.getElementById('light_mode_moon_icon');
 
 
-
-    // Variables.
+    // Global Variables.
     let taskListHashTable = {};
     let dragContainer
     
 
-
     // Event listeners.
 
-    // Prevent default form behaviour.
+    // // Change to light mode.
+    // dark_mode_sun_icon.addEventListener('click', (e) => {
+    //     let dark_elements = document.getElementsByClassName('dark');
+
+    //     for (element in dark_elements) {
+    //         element.classList.toggle('dark');
+    //         element.classList.toggle('light');
+    //     }
+    // });
+
+    // // Change to dark mode.
+
+
+
+    // Prevent the default behaviour of the form.
     new_task_form.addEventListener('submit', (e) => {
         e.preventDefault();
     })
 
-    // Handle enter pressed on task input.
+    // Hanle the enter key being pressed from the input field.
     new_task_input.addEventListener('keydown', (e) => {
 
-        // Continue if task is entered & enter key is pressed.
+        // Continue if a task is entered with the enter key.
         if (e.key === "Enter" && new_task_input.value != "") {
 
             // ID used for tasks.
