@@ -34,6 +34,17 @@
 
 
 
+// TODO light mode
+// TODO dark mode
+// TODO fix white space
+// TODO button labels in task creation (semantics)
+// TODO mobile css list-options space
+// TODO items left counter
+// TODO more aria labels
+// TODO semantics check
+
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -95,7 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // Draggable functionality
-    // TODO
 
     // task_list.addEventListener('dragstart', (e) => {
     //     dragContainer = e.target;
