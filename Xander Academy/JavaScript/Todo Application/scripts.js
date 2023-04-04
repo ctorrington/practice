@@ -68,17 +68,39 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listeners.
 
-    // // Change to light mode.
-    // dark_mode_sun_icon.addEventListener('click', (e) => {
-    //     let dark_elements = document.getElementsByClassName('dark');
+    // Change to light mode.
+    dark_mode_sun_icon.addEventListener('click', (e) => {
+        let dark_elements = document.getElementsByClassName('dark');
+        let light_elements = document.getElementsByClassName('light');
 
-    //     for (element in dark_elements) {
-    //         element.classList.toggle('dark');
-    //         element.classList.toggle('light');
-    //     }
-    // });
+        console.log("ACTIVATING LIGHT MODE")
+        console.log(dark_elements)
 
-    // // Change to dark mode.
+        for (element of dark_elements) {
+            element.style.display = "none";
+        }
+
+        for (element of light_elements) {
+            element.style.display = "block";
+        }
+    });
+
+    // Change to dark mode.
+    light_mode_moon_icon.addEventListener('click', (e) => {
+        let dark_elements = document.getElementsByClassName('dark');
+        let light_elements = document.getElementsByClassName('light');
+
+        console.log("ACTIVATING DARK MODE")
+        console.log(dark_elements)
+
+        for (element of dark_elements) {
+            element.style.display = "block";
+        }
+
+        for (element of light_elements) {
+            element.style.display = "none";
+        }
+    });
 
 
 
@@ -192,7 +214,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // A function to return the ID free without the descriptor.
-    function getID(id) {
+    function getID(id) {    
         return id.split('_')[0];
     }
 

@@ -49,6 +49,10 @@ p, li, button, span, small, div {
     align-items: center;
 }
 
+.main_section .light {
+    display: none;
+}
+
 
 /* PAGE HEADING SECTION */
 
