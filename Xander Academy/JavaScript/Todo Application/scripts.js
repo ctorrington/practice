@@ -233,6 +233,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Event listener for task completion.
         new_task_complete_button.addEventListener('click', function(e) {
             taskCompleted(e.target.getAttribute('id'));
+            new_task_complete_button.classList.toggle('task_completed');
         });
 
         // Create the list item element.
