@@ -130,6 +130,8 @@ p, li, button, span, small, div {
     color: white;
 
     border: 0px;
+
+    outline: none;
 }
 
 
