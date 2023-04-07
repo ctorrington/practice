@@ -199,12 +199,9 @@ p, li, button, span, small, div {
 
 
 .task_complete_button.task_completed{
-    /* background-image: url("data:image/svg+xml,%3Csvg id='cross_mark' xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cpath fill='%23494C6B' fill-rule='evenodd' d='M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z'%3E%3C/path%3E%3C/svg%3E"); */
     background-image: url("data:image/svg+xml,%3Csvg id='check_mark' xmlns='http://www.w3.org/2000/svg' width='11' height='9'%3E%3Cpath fill='none' stroke='%23FFF' stroke-width='2' d='M1 4.304L3.696 7l6-6'/%3E%3C/svg%3E");
     background-repeat: no-repeat;
     background-position: center;
-    /* width: 50px;
-    height: 50px; */
 }
 
 
@@ -214,6 +211,14 @@ p, li, button, span, small, div {
     height: 30px;
 
     justify-content: right;
+
+    background-color: var(--very-dark-desaturated-blue);
+
+    border: 0;
+
+    background-image: url("data:image/svg+xml,%3Csvg id='cross_mark' xmlns='http://www.w3.org/2000/svg' width='18' height='18'%3E%3Cpath fill='%23494C6B' fill-rule='evenodd' d='M16.97 0l.708.707L9.546 8.84l8.132 8.132-.707.707-8.132-8.132-8.132 8.132L0 16.97l8.132-8.132L0 .707.707 0 8.84 8.132 16.971 0z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 
