@@ -234,19 +234,12 @@ document.addEventListener("DOMContentLoaded", () => {
             taskCompleted(e.target.getAttribute('id'));
         });
 
-
         // Create the list item element.
         let new_task_list_item = document.createElement('li');
         new_task_list_item.setAttribute('id', `${taskCreationTime}_element`);
         new_task_list_item.setAttribute('class', "task_list_element");
-
-        // Create the actual list item value.     See more, https://www.w3schools.com/jsref/met_node_appendchild.asp
-        let new_task_list_item_text_node = document.createTextNode(taskName);
-
-        // Append the text node to the list item element,
-        // i.e. give the list item a value.
-        new_task_list_item.appendChild(new_task_list_item_text_node);
-
+        let new_task_description = document.createElement('span');
+        new_task_description.textContent = taskName;
 
         // Create the task remove button.
         let new_delete_task_button = document.createElement('button');
@@ -258,8 +251,7 @@ document.addEventListener("DOMContentLoaded", () => {
             taskDeleted(e.target.getAttribute('id'));
         })
 
-
-        // Another div to align the list elments correctly on the left.
+        // Alignment div for the completion button & task description
         let left_align_container = document.createElement('div');
         left_align_container.setAttribute('class', 'left_align_container');
 
@@ -272,16 +264,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Nest all the elements for the task.
         left_align_container.appendChild(new_task_complete_button);
-        left_align_container.appendChild(new_task_list_item);
+        left_align_container.appendChild(new_task_description);
 
         new_task_container.appendChild(left_align_container);
         new_task_container.appendChild(new_delete_task_button);
 
+        new_task_list_item.appendChild(new_task_container);
+
         // This appends new tasks to the top of the unordered list.
-        task_list.insertBefore(new_task_container, task_list.firstChild);
-
-
-        // document.getElementById(`${task}_container`).style.display = "none";
+        task_list.insertBefore(new_task_list_item, task_list.firstChild);
     };
 
 

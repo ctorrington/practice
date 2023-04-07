@@ -3,6 +3,9 @@
 
 
 :root {
+    /* Global variables */
+    --task-width: 400px;
+
     /* Dark Theme */
     --very-dark-blue: hsl(235, 21%, 11%);
     --very-dark-desaturated-blue: hsl(235, 24%, 19%);
@@ -17,6 +20,12 @@
     --light-grayish-blue: hsl(233, 11%, 84%);
     --dark-grayish-blue: hsl(236, 9%, 61%);
     --very-dark-grayish-blue: hsl(235, 19%, 35%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -59,8 +68,12 @@ p, li, button, span, small, div {
 
 .page_heading_section {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: space-between;
+
+    width: var(--task-width);
+
+    margin: 20px;
 }
 
 
@@ -76,28 +89,47 @@ p, li, button, span, small, div {
     display: flex;
     justify-content: left;
     align-items: center;
-}
 
+    width: var(--task-width);
+
+    background-color: var(--very-dark-desaturated-blue);
+    border-radius: 4px;
+
+    margin: 15px;
+}
 
 .new_task_container button {
     border-radius: 50%;
-    border: 1px solid white;
+    border: 2px solid white;
+    background-color: var(--very-dark-desaturated-blue);
 
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
+
+    margin: 3px;
 }
-
 
 .new_task_container form {
     margin-bottom: 0 0 20px;
 }
 
 
-
-
-
 .page_heading_section h1 {
     color: white;
+}
+
+#new_task_form {
+    width: 100%;
+}
+
+
+#new_task_input {
+    width: 100%;
+
+    background-color: var(--very-dark-desaturated-blue);
+    color: white;
+
+    border: 0px;
 }
 
 
@@ -109,6 +141,8 @@ p, li, button, span, small, div {
     flex-direction: column-reverse;
 
     color: white;
+
+    width: var(--task-width);
 }
 
 
@@ -117,12 +151,26 @@ p, li, button, span, small, div {
 }
 
 
+.task_list:first-child {
+    background-color: var(--very-dark-desaturated-blue);
+
+    margin: 0 0 25px;
+}
+
+
+.task_list:first-child button {
+    background-color: var(--very-dark-desaturated-blue);
+    color: white;
+    border: 0;
+}
+
+
 .task_container {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background-color: var(--dark-grayish-blue);
+    background-color: var(--very-dark-desaturated-blue);
 }
 
 
@@ -134,11 +182,14 @@ p, li, button, span, small, div {
 
 
 .task_complete_button {
-    display: block;
-    width: 30px;
-    height: 30px;
-
     border-radius: 50%;
+    border: 2px solid white;
+    background-color: var(--very-dark-desaturated-blue);
+
+    width: 20px;
+    height: 20px;
+
+    margin: 3px;
 }
 
 .task_delete_button {
