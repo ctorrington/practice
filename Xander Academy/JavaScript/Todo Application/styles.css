@@ -163,11 +163,16 @@ p, li, button, span, small, div {
 }
 
 
-/* .task_list:first-child button {
+.task_list:first-child button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
     background-color: var(--very-dark-desaturated-blue);
     color: white;
+
     border: 0;
-} */
+}
 
 
 .task_container {
