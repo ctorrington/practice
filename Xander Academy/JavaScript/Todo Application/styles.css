@@ -69,7 +69,7 @@ p, li, button, span, small, div {
 .page_heading_section {
     display: flex;
     justify-content: space-between;
-    align-items: space-between;
+    align-items: center;
 
     width: var(--task-width);
 
@@ -77,8 +77,15 @@ p, li, button, span, small, div {
 }
 
 
+.page_heading_section h1 {
+    color: white;
+
+    text-align: center;
+}
+
+
 .page_heading_section svg {
-    margin: auto 0;
+    /* margin: auto 0; */
 }
 
 
@@ -100,7 +107,7 @@ p, li, button, span, small, div {
 
 .new_task_container button {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: var(--very-dark-desaturated-blue);
 
     width: 20px;
@@ -113,10 +120,6 @@ p, li, button, span, small, div {
     margin-bottom: 0 0 20px;
 }
 
-
-.page_heading_section h1 {
-    color: white;
-}
 
 #new_task_form {
     width: 100%;
@@ -185,7 +188,7 @@ p, li, button, span, small, div {
 
 .task_complete_button {
     border-radius: 50%;
-    border: 2px solid white;
+    border: 1px solid white;
     background-color: var(--very-dark-desaturated-blue);
 
     width: 20px;
@@ -200,6 +203,11 @@ p, li, button, span, small, div {
     height: 30px;
 
     justify-content: right;
+}
+
+
+.task_description {
+    margin: 0 5px;
 }
 
 

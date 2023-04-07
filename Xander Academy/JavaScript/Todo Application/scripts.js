@@ -229,6 +229,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let new_task_complete_button = document.createElement('button');
         new_task_complete_button.setAttribute('id', `${taskCreationTime}_complete`);
         new_task_complete_button.setAttribute('class', "task_complete_button");
+        new_task_complete_button.style.border = "1px solid white";
         // Event listener for task completion.
         new_task_complete_button.addEventListener('click', function(e) {
             taskCompleted(e.target.getAttribute('id'));
@@ -239,6 +240,7 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_list_item.setAttribute('id', `${taskCreationTime}_element`);
         new_task_list_item.setAttribute('class', "task_list_element");
         let new_task_description = document.createElement('span');
+        new_task_description.setAttribute('class', 'task_description')
         new_task_description.textContent = taskName;
 
         // Create the task remove button.
