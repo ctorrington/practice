@@ -135,6 +135,8 @@ document.addEventListener("DOMContentLoaded", () => {
         for (element in taskListHashTable) {
             document.getElementById(`${getID(element)}_container`).style.display = "";
         };
+
+        changeFilterButtonColor(e);
     });
 
 
@@ -153,6 +155,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById(`${getID(element)}_container`).style.display = "none";
             }
         }
+
+        changeFilterButtonColor(e);
     });
 
     completed_filter_button.addEventListener('click', (e) => {
@@ -168,6 +172,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById(`${getID(element)}_container`).style.display = "none";
             };
         };
+
+        changeFilterButtonColor(e);
     });
 
 
@@ -184,6 +190,17 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         };
     });
+
+
+    // FUNCTIONS
+
+    // Set the correct color values for the filter buttons.
+    function changeFilterButtonColor(buttonClicked) {
+        console.log(buttonClicked.currentTarget)
+        console.log(buttonClicked.target.)
+        console.log(document.getElementsByClassName('task_center_align_div').children);
+        buttonClicked.style.color = "blue";
+    }
 
     function getElementsByClass(elementClassList) {
         let elementList = []
