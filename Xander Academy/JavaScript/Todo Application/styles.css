@@ -62,6 +62,10 @@ p, li, button, span, small, div {
     display: none;
 }
 
+.main_section .dark {
+    display: block
+}
+
 
 /* PAGE HEADING SECTION */
 
@@ -251,11 +255,11 @@ p, li, button, span, small, div {
 
 @media screen and (min-width: 1px){
 
-    .main_section, .dark {
+    .main_section.dark {
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-mobile-dark.jpg?raw=true");
     }
 
-    .main_section, .light {
+    .main_section.light {
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-mobile-light.jpg?raw=true");
     }
 
@@ -278,11 +282,11 @@ p, li, button, span, small, div {
 
 @media screen and (min-width: 376px){
 
-    .main_section, .dark {
+    .main_section.dark {
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-dark.jpg?raw=true")
     }
 
-    .main_section, .light {
+    .main_section.light {
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-light.jpg?raw=true");
     }
 

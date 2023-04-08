@@ -70,36 +70,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Change to light mode.
     dark_mode_sun_icon.addEventListener('click', (e) => {
-        let dark_elements = document.getElementsByClassName('dark');
-        let light_elements = document.getElementsByClassName('light');
-
-        console.log("ACTIVATING LIGHT MODE")
-        console.log(dark_elements)
-
-        for (element of dark_elements) {
-            element.style.display = "none";
-        }
-
-        for (element of light_elements) {
-            element.style.display = "block";
-        }
+        changeTheme(['light', 'dark'])
     });
 
     // Change to dark mode.
     light_mode_moon_icon.addEventListener('click', (e) => {
-        let dark_elements = document.getElementsByClassName('dark');
-        let light_elements = document.getElementsByClassName('light');
-
-        console.log("ACTIVATING DARK MODE")
-        console.log(dark_elements)
-
-        for (element of dark_elements) {
-            element.style.display = "block";
-        }
-
-        for (element of light_elements) {
-            element.style.display = "none";
-        }
+         changeTheme(['light', 'dark'])
     });
 
 
@@ -209,7 +185,32 @@ document.addEventListener("DOMContentLoaded", () => {
         };
     });
 
+    function getElementsByClass(elementClassList) {
+        let elementList = []
 
+        for (elementClass of elementClassList){ 
+            console.log(elementClass)
+            elementList.push(...document.getElementsByClassName(elementClass));
+        }
+        return elementList
+    }
+
+
+    // Change the classes of elements that switch between dark & light mode.
+    function changeTheme(elementClassList) {
+
+        let elementList = getElementsByClass(elementClassList)
+
+
+        console.log(elementList)
+        for (element of elementList) {
+            console.log("1")
+            console.log(element)
+            element.classList.toggle('dark');
+            element.classList.toggle('light');
+            console.log(element)
+        }
+    }
 
 
 
