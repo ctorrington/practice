@@ -167,7 +167,7 @@ p, li, button, span, small, div {
 }
 
 
-.task_list > li {
+.task_list > li:last-child {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
