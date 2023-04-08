@@ -167,11 +167,14 @@ p, li, button, span, small, div {
 }
 
 
-.task_list:first-child button {
+.task_list > li {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+}
 
+
+.task_list:first-child button {
     background-color: var(--very-dark-desaturated-blue);
     color: white;
 
