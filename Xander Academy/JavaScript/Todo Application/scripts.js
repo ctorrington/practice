@@ -257,7 +257,7 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_list_item.setAttribute('id', `${taskCreationTime}_element`);
         new_task_list_item.setAttribute('class', "task_list_element");
         let new_task_description = document.createElement('span');
-        new_task_description.setAttribute('class', 'task_description')
+        new_task_description.setAttribute('class', `task_description ${dark_mode_sun_icon.classList[0]}`)
         new_task_description.textContent = taskName;
 
         // Create the task remove button.
@@ -278,7 +278,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Create the div container for the list item elements (task & 2 buttons).
         let new_task_container = document.createElement('div');
         new_task_container.setAttribute('id', `${taskCreationTime}_container`)
-        new_task_container.setAttribute('class', 'task_container');
+        new_task_container.setAttribute('class', `task_container ${dark_mode_sun_icon.classList[0]}`);
         new_task_container.setAttribute('draggable', 'true');
 
         // Nest all the elements for the task.

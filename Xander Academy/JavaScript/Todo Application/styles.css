@@ -95,23 +95,22 @@ body.light {
 
 /* NEW TASK CONTAINER SECTION */
 
-.new_task_container {
+.new_task_container.dark {
     display: flex;
     justify-content: left;
     align-items: center;
-
     border-radius: 4px;
-
     margin: 15px;
-}
-
-.new_task_container {
     background-color: var(--very-dark-desaturated-blue);
 }
 
 .new_task_container.light {
     display: flex;
     flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    border-radius: 4px;
+    margin: 15px;
     background-color: white;
 }
 
@@ -223,12 +222,28 @@ body.light {
     cursor: pointer;
 }
 
-.task_container {
+.task_container.dark {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     background-color: var(--very-dark-desaturated-blue);
+}
+
+.task_container.light {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: white;
+}
+
+.task_description.dark {
+    color: white;
+}
+
+.task_description.light {
+    color: black
 }
 
 .left_align_container {
