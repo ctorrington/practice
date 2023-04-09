@@ -39,6 +39,12 @@ p, li, button, span, small, div {
     font-weight: 400;
 }
 
+/* html {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+} */
+
 
 /* MAIN SECTION */
 
@@ -55,10 +61,6 @@ body.light {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-.main_section .light {
-    display: none;
 }
 
 
