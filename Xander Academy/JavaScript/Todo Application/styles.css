@@ -171,6 +171,11 @@ p, li, button, span, small, div {
 }
 
 
+#all_filter_button {
+    color: blue;
+}
+
+
 .task_list:first-child {
     background-color: var(--very-dark-desaturated-blue);
 

@@ -52,13 +52,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let new_task_input = document.getElementById('new_task_input');
     let new_task_form = document.getElementById('new_task_form');
     let task_list = document.getElementById('task_list');
-
     let active_filter_button = document.getElementById('active_filter_button');
     let all_filter_button = document.getElementById('all_filter_button');
     let completed_filter_button = document.getElementById('completed_filter_button');
     let clear_completed_button = document.getElementById('clear_completed_button');
     let dark_mode_sun_icon = document.getElementById('dark_mode_sun_icon_button');
     let light_mode_moon_icon = document.getElementById('light_mode_moon_icon_button');
+
 
 
     // Global Variables.
@@ -195,11 +195,12 @@ document.addEventListener("DOMContentLoaded", () => {
     // FUNCTIONS
 
     // Set the correct color values for the filter buttons.
-    function changeFilterButtonColor(buttonClicked) {
-        console.log(buttonClicked.currentTarget)
-        console.log(buttonClicked.target)
-        console.log(document.getElementsByClassName('task_center_align_div').children);
-        buttonClicked.style.color = "blue";
+    function changeFilterButtonColor(e) {
+        for (button of e.target.parentNode.children) {
+            button.style.color = "grey";
+        }
+
+        e.target.style.color = "blue";
     }
 
     function getElementsByClass(elementClassList) {
@@ -221,11 +222,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         console.log(elementList)
         for (element of elementList) {
-            console.log("1")
-            console.log(element)
             element.classList.toggle('dark');
             element.classList.toggle('light');
-            console.log(element)
         }
     }
 
