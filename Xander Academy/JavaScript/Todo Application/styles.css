@@ -145,17 +145,21 @@ body.light {
     width: 100%;
 }
 
-#new_task_input {
-    width: 100%;
-
-    background-color: var(--very-dark-desaturated-blue);
+#new_task_input.dark {
     color: white;
-
+    width: 100%;
+    background-color: transparent;
     border: 0px;
-
     outline: none;
 }
 
+#new_task_input.light {
+    color: black;
+    width: 100%;
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+}
 
 /* TASK LIST SECTION */
 
