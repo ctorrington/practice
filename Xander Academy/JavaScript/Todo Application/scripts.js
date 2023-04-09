@@ -244,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // creates the task complete button.
         let new_task_complete_button = document.createElement('button');
         new_task_complete_button.setAttribute('id', `${taskCreationTime}_complete`);
-        new_task_complete_button.setAttribute('class', "task_complete_button");
+        new_task_complete_button.setAttribute('class', `task_complete_button ${dark_mode_sun_icon.classList[0]}`);
         new_task_complete_button.style.border = "1px solid white";
         // Event listener for task completion.
         new_task_complete_button.addEventListener('click', function(e) {
@@ -263,7 +263,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Create the task remove button.
         let new_delete_task_button = document.createElement('button');
         new_delete_task_button.setAttribute('id', `${taskCreationTime}_delete`);
-        new_delete_task_button.setAttribute('class', "task_delete_button");
+        new_delete_task_button.setAttribute('class', `task_delete_button ${dark_mode_sun_icon.classList[0]}`);
         // Send theparent of the task to be deleted (the container div),
         // as target of the event target 
         new_delete_task_button.addEventListener('click', function(e) {

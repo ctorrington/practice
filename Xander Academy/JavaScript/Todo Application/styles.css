@@ -254,13 +254,19 @@ body.light {
 
 .task_complete_button {
     border-radius: 50%;
-    border: 1px solid white;
-    background-color: var(--very-dark-desaturated-blue);
-
+    /* border: 1px solid white; */
+    background-color: transparent;
     width: 20px;
     height: 20px;
-
     margin: 3px;
+}
+
+.task_complete_button.dark {
+    border: 1px solid white;
+}
+
+.task_complete_button.light {
+    border: 1px solid black;
 }
 
 .task_complete_button.task_completed{
@@ -304,7 +310,7 @@ body.light {
 
 @media screen and (min-width: 1px){
 
-    body {
+    .main_section.dark {
         width: 100%;
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-dark.jpg?raw=true");
         background-repeat: no-repeat;
@@ -362,7 +368,7 @@ body.light {
 
 @media screen and (min-width: 376px){
 
-    body {
+    .main_section.dark {
         width: 100%;
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-dark.jpg?raw=true");
         background-repeat: no-repeat;
