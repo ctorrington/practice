@@ -33,7 +33,6 @@ body {
     font-size: 18px;
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 700;
-    background-color: var(--veryd-dark-grayish-blue);
 }
 
 p, li, button, span, small, div {
@@ -99,18 +98,36 @@ body.light {
     justify-content: left;
     align-items: center;
 
-    /* width: var(--task-width); */
-
-    background-color: var(--very-dark-desaturated-blue);
     border-radius: 4px;
 
     margin: 15px;
 }
 
-.new_task_container button {
+.new_task_container {
+    background-color: var(--very-dark-desaturated-blue);
+}
+
+.new_task_container.light {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+}
+
+.create_task_button.dark  {
     border-radius: 50%;
     border: 1px solid white;
-    background-color: var(--very-dark-desaturated-blue);
+    background-color: transparent;
+
+    width: 20px;
+    height: 20px;
+
+    margin: 3px;
+}
+
+.create_task_button.light {
+    border-radius: 50%;
+    border: 1px solid black;
+    background-color: transparent;
 
     width: 20px;
     height: 20px;
