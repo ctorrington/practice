@@ -180,8 +180,14 @@ body.light {
     color: blue;
 }
 
-.task_list:first-child {
+.task_list:first-child.dark {
     background-color: var(--very-dark-desaturated-blue);
+
+    margin: 0 0 25px;
+}
+
+.task_list:first-child.light {
+    background-color: white;
 
     margin: 0 0 25px;
 }
@@ -198,8 +204,15 @@ body.light {
     color: grey;
 }
 
-.task_list:first-child button {
+.task_list:first-child button.dark {
     background-color: var(--very-dark-desaturated-blue);
+    color: grey;
+
+    border: 0;
+}
+
+.task_list:first-child button.light {
+    background-color: white;
     color: grey;
 
     border: 0;
@@ -322,10 +335,6 @@ body.light {
 
         width: 70%;
     }
-
-    /* .task_list:last-child {
-        align-items: center;
-    } */
 
     .tasks_remaining, .clear_completed_tasks_button {
         display: none;
