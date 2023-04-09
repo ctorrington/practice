@@ -43,6 +43,14 @@ p, li, button, span, small, div {
 
 /* MAIN SECTION */
 
+body.dark {
+    background-color: var(--very-dark-desaturated-blue);
+}
+
+body.light {
+    background-color: white;
+}
+
 .main_section {
     display: flex;
     flex-direction: column;
