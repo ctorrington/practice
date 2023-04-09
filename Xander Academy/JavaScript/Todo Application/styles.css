@@ -75,6 +75,7 @@ p, li, button, span, small, div {
 
 #dark_mode_sun_icon_button {
     border: 0;
+    background-color: transparent;
 }
 
 #light_mode_moon_icon_button {
@@ -253,8 +254,11 @@ p, li, button, span, small, div {
     }
 
     .main_section.light {
+        width: 100%;
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-mobile-light.jpg?raw=true");
         background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vh;
     }
 
 
@@ -312,8 +316,11 @@ p, li, button, span, small, div {
     }
 
     .main_section.light {
+        width: 100%;
         background-image: url("https://github.com/ctorrington/practice/blob/master/Xander%20Academy/JavaScript/Todo%20Application/images/bg-desktop-light.jpg?raw=true");
         background-repeat: no-repeat;
+        background-size: cover;
+        height: 30vh;
     }
 
     /* PAGE HEADING SECTION */
@@ -342,8 +349,6 @@ p, li, button, span, small, div {
 
     .task_list:first-child {
         display: block;
-        /* display: flex;
-        justify-content: space-between; */
 
         width: var(--desktop-task-width);
     }
