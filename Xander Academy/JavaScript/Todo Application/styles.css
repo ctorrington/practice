@@ -237,8 +237,13 @@ body.light {
     border: 0;
 }
 
-.task_list:first-child button:hover {
+.task_list:first-child button.dark:hover {
     color: white;
+    cursor: pointer;
+}
+
+.task_list:first-child button.light:hover {
+    color: darkgray;
     cursor: pointer;
 }
 
