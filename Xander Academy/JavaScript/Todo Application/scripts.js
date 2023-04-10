@@ -56,8 +56,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let all_filter_button = document.getElementById('all_filter_button');
     let completed_filter_button = document.getElementById('completed_filter_button');
     let clear_completed_button = document.getElementById('clear_completed_button');
-    let dark_mode_sun_icon = document.getElementById('dark_mode_sun_icon_button');
-    let light_mode_moon_icon = document.getElementById('light_mode_moon_icon_button');
+    let theme_button = document.getElementById('theme_button');
 
 
 
@@ -68,14 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Event listeners.
 
-    // Change to light mode.
-    dark_mode_sun_icon.addEventListener('click', (e) => {
-        changeTheme(['light', 'dark'])
-    });
-
-    // Change to dark mode.
-    light_mode_moon_icon.addEventListener('click', (e) => {
-         changeTheme(['light', 'dark'])
+    // Change themes.
+    theme_button.addEventListener('click', (e) => {
+        changeTheme(['light', 'dark']);
+        console.log('yo')
     });
 
 
