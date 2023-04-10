@@ -239,7 +239,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // creates the task complete button.
         let new_task_complete_button = document.createElement('button');
         new_task_complete_button.setAttribute('id', `${taskCreationTime}_complete`);
-        new_task_complete_button.setAttribute('class', `task_complete_button ${dark_mode_sun_icon.classList[0]}`);
+        new_task_complete_button.setAttribute('class', `task_complete_button ${theme_button.classList[0]}`);
         new_task_complete_button.style.border = "1px solid white";
         // Event listener for task completion.
         new_task_complete_button.addEventListener('click', function(e) {
@@ -252,13 +252,13 @@ document.addEventListener("DOMContentLoaded", () => {
         new_task_list_item.setAttribute('id', `${taskCreationTime}_element`);
         new_task_list_item.setAttribute('class', "task_list_element");
         let new_task_description = document.createElement('span');
-        new_task_description.setAttribute('class', `task_description ${dark_mode_sun_icon.classList[0]}`)
+        new_task_description.setAttribute('class', `task_description ${theme_button.classList[0]}`)
         new_task_description.textContent = taskName;
 
         // Create the task remove button.
         let new_delete_task_button = document.createElement('button');
         new_delete_task_button.setAttribute('id', `${taskCreationTime}_delete`);
-        new_delete_task_button.setAttribute('class', `task_delete_button ${dark_mode_sun_icon.classList[0]}`);
+        new_delete_task_button.setAttribute('class', `task_delete_button ${theme_button.classList[0]}`);
         // Send theparent of the task to be deleted (the container div),
         // as target of the event target 
         new_delete_task_button.addEventListener('click', function(e) {
@@ -273,7 +273,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // Create the div container for the list item elements (task & 2 buttons).
         let new_task_container = document.createElement('div');
         new_task_container.setAttribute('id', `${taskCreationTime}_container`)
-        new_task_container.setAttribute('class', `task_container ${dark_mode_sun_icon.classList[0]}`);
+        new_task_container.setAttribute('class', `task_container ${theme_button.classList[0]}`);
         new_task_container.setAttribute('draggable', 'true');
 
         // Nest all the elements for the task.
